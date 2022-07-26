@@ -1,0 +1,23 @@
+---
+title: "Findings Overview"
+
+---
+# QA
+- chart of codes 
+- explain that
+
+## NLP
+###*Co-Occurance*
+
+![](www/co-occurence.png)
+
+###*Topic Modeling*
+
+![ ](www/topic_model.png)
+
+
+###*tf-idf*
+####*Term Frequency Inverse Document Frequency*
+![ ](www/tf_idf.png)
+
+
