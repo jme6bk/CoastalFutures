@@ -8,7 +8,7 @@ output:
     toc_float: true
     css: style.css
 navbar:
-  title: "Soldier Characteristics that Contribute to Unit Performance"
+  title: "Coastal Futures"
   left:
     - text: "Overview"
       href: index.html
@@ -28,4 +28,4 @@ navbar:
       href: team.html
     - text: ""
       icon: fa-github
-      href: "https://github.com/uva-bi-sdad/dspg2022_website_template
+      href: "https://github.com/jme6bk/CoastalFutures.git"
