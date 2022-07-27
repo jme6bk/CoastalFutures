@@ -2,7 +2,7 @@
 title: "Building Capacity for Data-Driven Adaptation in Rural Coastal Communities"
 ---
 
-![](www/EasternShore.png)
+![](www/EasternShore.png){width=40% }</center>
 
 # **Overview**
 This project is part of a collaboration with UVA’s Environmental Resilience Institute to study climate impacts on the rural Eastern Shore of Virginia (ESVA), with the goal of developing tools and building the capacity for communities to deal with these impacts. We will develop a synthetic population that represents these communities by combining information across multiple sources of data, administrative and survey data, to get a representation of these rural communities down to the level of individual households and farms. This will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.

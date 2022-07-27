@@ -3,7 +3,7 @@ title: "Team"
 ---
 
 # Interns
-![Jillian Eberhart](www/JillEberhart.png)  
+![Jillian Eberhart](www/JillEberhart.png){width=40% }</center>
 
 ## *Jillian Eberhart*
 Jillian is a rising third year at the Univerisity of Virginia pursuing a B.A. in Statistics with a concentration in Biostatistics and a minor in Health and Wellness. 
