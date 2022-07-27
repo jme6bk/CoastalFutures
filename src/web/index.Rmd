@@ -1,43 +1,49 @@
 ---
-title: "Soldier Charcteristics that Contribute to Unit Performance: A Qualitative Analysis"
+title: "Building Capacity for Data-Driven Adaptation in Rural Coastal Communities"
 ---
 
+![](www/EasternShore.png)
 
+# **Overview**
+This project is part of a collaboration with UVA’s Environmental Resilience Institute to study climate impacts on the rural Eastern Shore of Virginia (ESVA), with the goal of developing tools and building the capacity for communities to deal with these impacts. We will develop a synthetic population that represents these communities by combining information across multiple sources of data, administrative and survey data, to get a representation of these rural communities down to the level of individual households and farms. This will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.
 
-![ ](www/black-logo.png)
+# **Research Question**
+How do coastal flooding and groundwater salinization impact crop production and coastal habitats?
 
+Where are climate risks and inequities most pronounced now and in the future?
 
-# **Goal**
-Identify characteristics of individual Soldiers that contribute to unit performance
+How will water security change across different communities? How does this change under different adaptation policies?
 
-# **Why**
-Key to extending work to unit performance without requiring unit-level measurement 
+# **Goals**
+####*Broader*
+-Develop tools and building the capacity for communities to deal with the impacts of climate risk such as saltwater intrusion, accelerated sea level rise, storm flooding
 
-# **Method**
-##Document Analysis  
+-Create an agent-based model to inform stakeholders' decisions
 
-Document analysis is a “form of qualitative research in which documents are interpreted by the researcher to give voice and meaning around an assessment topic" (Bowen, 2009)  
+-Create hydrological models to measure flood hazards, water supply, and ground water salinization
 
-Our Approach: A Mixed Method Thematic Approach  
+####*Specifically*
+-Create a synthetic Population using IPF (Iterative Proportional Fitting)
 
-##Natural Language Processing  
+-Data discovery and cleaning down to the level of individual household/farm
 
-Natural language processing (NLP) "strives to build machines that understand and respond to text data much the same way humans do" (IBM, 2022)  
-  
-All NLP for this project was run on a corpus composed of the 10 documents on which document analysis was conducted. The documents were clean by removing stop words (i.e. the, and, of) and legitimatizing each word. Lemmatizing transforms each word to a common base word.
-  
-###*Cooccurance*  
-Cooccurance visualizes word pairs that occur together most frequently in the corpus.  
+-Apply methods for demographic projections to predict how these populations will change over the next decades
 
-###*Term Frequency- Inverse Document Frequency*  
-TF-IDF is a text classification method that reflects the importance of a word to a document in a corpus of documents.  
-  
-###*Latent Dirichlet Allocation*  
-LDA is a Bayesian topic model that discovers the topics in a corpus of documents and the concurrent probability that they will occur. 
+# **Methods**
 
+####*Literature Review*
+Established familiarity with and understanding of current research on climate risk and synthetic methods before carrying out a new investigation to find out what research has already been done and identify what is unknown within the project
 
+####*Data Inventory*
+Explored and assessed the usability, accuracy, and biases of possible national and state data sources to create sub-county level data sets to generate a synthetic population, demographic projections, and for the use of all collaborators thoughout the course of the project
 
+####*Syntheic Population*
+Through a technique called iterative proportional fitting, a synthetic population down the the household level was created for Accomack and Northampton county based on the American Community Survey Public Use Microdata Sample (ACS PUMS)
 
+#**Sponsor**
+National Science Foundation (NSF)
+
+![](www/NSF.png)
 
 
 <!-- Here's how you make a list: -->

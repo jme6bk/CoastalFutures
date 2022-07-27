@@ -1,0 +1,107 @@
+---
+title: "Data Inventory"
+output: html_document
+---
+####*The purpose of data inventory is to have a complete record of the information resources used throughout the course of the project. It allows for an in depth assessment of the usefulness, accuracy, credibility, stability, accessibility, and more of various data source. Below are the questions that were asked and answered for our data sources. Not all data sources have been used due to projects needs as well as inaccessibility *
+
+Data Sources: 
+
+- USDA NASS CropLand Data Layer
+
+- USDA NASS CropScape
+
+- Coastal Change Analysis Program (C-CAP) Regional land Coverage
+
+- Census of Agriculture
+
+- Integrated Public Use Microdata Series (IPUMS)
+
+- Farms Under Threat
+
+####*Purpose:* 
+Why are the data collected and how does the organization use the data?
+
+What is the purpose of the organization collecting the data?
+
+Who else uses these data?
+
+Who do they sell the data to?
+
+####*Method:*
+What type of data is collected? 
+
+What is the data collection method?
+
+If designed, who created the questions?
+
+What are the raw sources of the collected data prior to any aggregation?
+
+####*Description:*
+What is the general topic of the data?
+
+What are the earliest and latest dates for which data are available?
+
+What is the nature of the data? Time series, longitudinal, one time point?
+
+Is the data geospatial? 
+
+####*Timeliness:*
+Is the collected data available periodically?
+
+How soon after a reference period ends can a data source be prepared and provided?
+
+####*Selectivity:*
+What is the data universe and at what unit is represented? 
+
+What unit is represented at the record level of the data source?
+
+Does the actually universe match the stated intentions? What has been included and excluded? Why?
+
+What is the sampling technique used?
+
+What is the coverage?
+
+####*Accessibility:*
+How can the data be accessed? 
+
+Are they open data?
+
+Any legal, regulatory, or administrative restrictions on accessing the data source?
+
+Cost? Is it one-time or annual or project-based payment?
+
+Are any records or fields collected, but not included in data source, such as for confidentiality reasons?
+
+Is there a subset of variables and/or data that must be obtained through a separate process?
+
+If yes, is there a separate legal, regulatory, or administrative restrictions on accessing the data source?
+
+####*Metadata:*
+Are there unique IDs for unique elements that can be used to link data? Are there descriptions of each variable?
+
+Is there information available to assess the transparency and soundness of the methods to gather the data for our purposes?
+
+Is there a description of each variable in the source along with their valid values?
+
+Is there a data dictionary or codebook?
+
+####*Stability/coherence:*
+Where there changes in the data capture method and if so what were they? Were there any changes in the data sources?
+
+Were there any changes to the universe of data being captured (including geographical areas covered) and if so what were they?
+
+Were there any changes in the sources of data and if so what were they?
+
+####*Accuracy:*
+Are there any known sources of error?
+
+Describe any quality control checks performed by the data’s owner.
+
+####*Privacy and Security:*
+Was consent given by participant? If so, how was consent given?
+
+Are there legal limitations or restrictions on the use of the data?
+
+What confidentially policies are in place?
+####*Research:*
+What research has been done with this dataset?

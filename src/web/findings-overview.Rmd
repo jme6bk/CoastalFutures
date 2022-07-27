@@ -1,23 +1,9 @@
 ---
-title: "Findings Overview"
-
+title: "Findings"
 ---
-# QA
-- chart of codes 
-- explain that
+##**Cropland Data Layer**
+![](www/CDLplot.png)
 
-## NLP
-###*Co-Occurance*
+##**C-CAP Regional Land Cover and Change**
 
-![](www/co-occurence.png)
-
-###*Topic Modeling*
-
-![ ](www/topic_model.png)
-
-
-###*tf-idf*
-####*Term Frequency Inverse Document Frequency*
-![ ](www/tf_idf.png)
-
-
+##**Synthetic Population**

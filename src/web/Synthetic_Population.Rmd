@@ -1,0 +1,6 @@
+---
+title: "Synthetic Population"
+output: html_document
+---
+##**Syntheic Population**
+EXPLAIN PROCESS HERE
