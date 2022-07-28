@@ -57,7 +57,7 @@ Percent Area of Corn for Each Parcel
 
 
 
-####*5.Repition*
+####*5. Repetition*
 This process is repeated for each crop for each year in both Accomack and Northampton County. A function was created to automate this process. Below are the data sets for Northampton crops and Accomack crops for the year 2021. 
 
 ```{r, layout="l-body-outset", echo = FALSE}
