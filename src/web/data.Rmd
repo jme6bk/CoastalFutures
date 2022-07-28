@@ -75,9 +75,22 @@ The code can be found [here](https://github.com/uva-bi-sdad/dspg22_coastal/tree/
 ##**C-CAP Regional Land Cover and Change**
 
 ##**Parcels Data**
+The counties of Northampton and Accomack are divided up into parcels. Parcels are very small geographies at the sub-county level. In Northampton county, there are 16,123 total parcels and in Accomack county there are 48,435 parcels. These parcels are a consistent sub-county unit of measure that will be utilized throughout the course of this project. The table below is a snapshot of the parcel data as a simple features object. This data interacts with the Regional land Cover and Change, Cropland Data Layer, and the housing data. 
+
+```{r, layout="l-body-outset", echo = FALSE}
+library(rmarkdown)
+paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/ESVAparcels.RDS"))
+
+```
+
+These two plots show the parcels boundaries within the two seperate counties. 
+![Eastern Shore of Virginia Parcel Plot](www/ESVAparcels.png)
 
 ##**Housing Data**
 
 ##**ACS Public Use Microdata Sample**
 
-##**Iterative Proportional Fitting data**
+List all the tables from ACS
+explain how this is used for IPF
+
+

@@ -1,4 +1,5 @@
 #### all data need to be imported ###
+library(dplyr)
 
 #corn_Accomack1
 saveRDS(corn_accomack, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/corn_accomack1.RDS")
@@ -19,3 +20,11 @@ saveRDS(Northampton2021, file = "/home/jme6bk/github/CoastalFutures/Data_and_Cod
 #Accomack CDL
 Accomack2021 <- Accomack2021 %>% arrange(Crop)
 saveRDS(Accomack2021, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomack2021.RDS")
+
+#Accomack BlackKnight Housing
+
+
+#Parcel data
+saveRDS(ESVAparcels, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/ESVAparcels.RDS")
+
+
