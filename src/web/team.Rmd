@@ -8,7 +8,7 @@ title: "Team"
 ## *Jillian Eberhart*
 Jillian is a rising third year at the Univerisity of Virginia pursuing a B.A. in Statistics with a concentration in Biostatistics and a minor in Health and Wellness. 
 
-![Kishorekarthick](www/Kishorepic.png)</center>
+![Kishorekarthick](www/Kishorepic.png){width=40% }</center>
 ## *Kishorekarthick *
 Kishore is a graduate student at the University of Virginia doing a Masters in Computer Engineering.
 

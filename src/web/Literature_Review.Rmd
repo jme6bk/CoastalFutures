@@ -17,7 +17,7 @@ The literatures which we took into consideration for review can be classified in
 
 ###**Climate Risks**
 Literatures under Climate risks generally contains information about negative impacts of climate change. It explains how change in climate affects lives, livelihoods, health status, economic, social and cultural assets, etc. One major effect is  **saltwater intrusion** from sea level rise and flooding.
-![](www/climatechangeeffects.png) 
+![](www/climatechangeeffects.png){width = 40%}
 **Literatures:**
 
 - Evaluating the economic cost of coastal flooding
