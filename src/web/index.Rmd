@@ -1,5 +1,9 @@
 ---
 title: "Building Capacity for Data-Driven Adaptation in Rural Coastal Communities"
+output:
+  html_document:
+    includes:
+      in_header: hero-image.html
 ---
 
 ![](www/EasternShore.png){width=40% }</center>

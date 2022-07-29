@@ -3,6 +3,14 @@ title: "Findings"
 ---
 ##**Cropland Data Layer**
 ![](www/CDLplot.png)
+```{r, layout="l-body-outset", echo = FALSE}
+library(rmarkdown)
+Northampton2021 <- readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Northampton2021.RDS")
+
+```
+
+
+
 
 ##**C-CAP Regional Land Cover and Change**
 
