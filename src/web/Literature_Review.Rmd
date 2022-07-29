@@ -5,9 +5,11 @@ output: html_document
 ##**Literature Review**
 To Kick off the project, We started making surveys on various Scholarly sources under Climates Risks and Synthetic methods. The literature review helped us to gain familiarity with various methods involved in the process. We came to know about various theories driving the field and it  helped us to curate our approach.
 
+![](www/literaturereview.png){width=40%}</center>
+
 ###**Categories**
 
-The literatures which we tok into consideration for review can be classified into **two** categories.They are
+The literatures which we took into consideration for review can be classified into **two** categories.They are
 
 - Climate Risks
 
@@ -15,6 +17,8 @@ The literatures which we tok into consideration for review can be classified int
 
 ###**Climate Risks**
 Literatures under Climate risks generally contains information about negative impacts of climate change. It explains how change in climate affects lives, livelihoods, health status, economic, social and cultural assets, etc. 
+![](www/climatechangeeffects.png) 
+**Literatures:**
 
 - Evaluating the economic cost of coastal flooding
 
@@ -30,7 +34,19 @@ Literatures under Climate risks generally contains information about negative im
 
 ###**Synthetic Methods**
 
-hi 
+Synthetic methods generally includes literatures realted to construction of Synthetic Population. Methods for generating synthetic data include Iterative Proportional Fitting (IPF) and Multiple imputation(MI).
+
+**Literatures:**
+
+- Creating Synthetic Baseline Population
+
+- mice: Multivariate Imputation by Chained Equations in R
+
+- Inference for Partially Synthetic, Public Use Microdata Sets
+
+
+
+
 
 
 

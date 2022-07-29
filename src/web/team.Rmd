@@ -8,7 +8,9 @@ title: "Team"
 ## *Jillian Eberhart*
 Jillian is a rising third year at the Univerisity of Virginia pursuing a B.A. in Statistics with a concentration in Biostatistics and a minor in Health and Wellness. 
 
-## *Kishore UPDATE *
+![Kishorekarthick](www/Kishorepic.png)</center>
+## *Kishorekarthick *
+Kishore is a graduate student at the University of Virginia doing a Masters in Computer Engineering.
 
 # Social and Decision Analytics Staff
 ![Joshua Goldstein](www/Josh_pic.png){width=40% }</center>  
