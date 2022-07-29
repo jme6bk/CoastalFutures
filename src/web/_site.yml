@@ -20,6 +20,8 @@ navbar:
           href: Literature_Review.html
         - text: Data Inventory
           href: Data_Inventory.html
+        - text: Data Transformation
+          href: data-transformation.html
         - text: Synthetic Population
           href: Synthetic_Population.html
     - text: "Findings"

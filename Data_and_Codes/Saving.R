@@ -79,7 +79,7 @@ ggplot() +
 ############### Graph ###################
 #Northampton
 sample_landuse <- landuse2016 %>% filter(PTM_ID %in% c("69-A-8", "105-9-E", "77B-1-1"))
-sample_landuse_Northampton <- sample_landuse[-c(10,13),]
+sample_landuse_Northampton <- sample_landuse %>% filter(LOCALITY=="Northampton County")
 
 #CDL Parcels Plot- Northampton
 ggplot(sample_landuse_Northampton, aes(fill=use, y=perc_area_landcover, x=PTM_ID)) + 
@@ -92,7 +92,9 @@ ggplot(sample_landuse_Northampton, aes(fill=use, y=perc_area_landcover, x=PTM_ID
   theme(text = element_text(size = 20))    
 
 #Accomack
-sample_landuse_Accomack <- landuse2016 %>% filter(PTM_ID %in% c("109-2-A", "25-A-100", "112-A-5"))
+sample_landuse <- landuse2016 %>% filter(PTM_ID %in% c("109-2-A", "25-A-100", "112-A-5"))
+sample_landuse_Accomack <- sample_landuse %>% filter(LOCALITY=="Accomack County")
+
 
 #CDL Parcels Plot- Northampton
 ggplot(sample_landuse_Accomack, aes(fill=use, y=perc_area_landcover, x=PTM_ID)) + 

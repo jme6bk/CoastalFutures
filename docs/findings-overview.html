@@ -343,6 +343,9 @@ div.tocify {
       <a href="Data_Inventory.html">Data Inventory</a>
     </li>
     <li>
+      <a href="data-transformation.html">Data Transformation</a>
+    </li>
+    <li>
       <a href="Synthetic_Population.html">Synthetic Population</a>
     </li>
   </ul>
@@ -379,32 +382,33 @@ div.tocify {
 
 <div id="cropland-data-layer-ccap-regional-land-cover-and-change" class="section level2">
 <h2><strong>Cropland Data Layer &amp; CCAP Regional Land Cover and Change</strong></h2>
-<p>To visually see how the data was manipulated, three parcels from each county were selcted. The graphs shown below include Northampton and Accomack Counties for the year 2016 from both Cropland Data Layer with the CCAP Regional Land Cover and Change. It is intresting to compare and contrast the two data sources to see any similarities or differences among the same exact areas. The type of activity that is going on in these parcels, indicates the purpose of the land wehether that is argicultural, industrial, communial, or uninhabitated.</p>
-<div id="northampton-cropland-data-layer-parcels" class="section level4">
-<h4><em>Northampton Cropland data Layer Parcels</em></h4>
+<p>In order to visualize how the data was manipulated, three parcels from each county were selcted and their percent area land uses were graphed. The graphs shown below include Northampton and Accomack Counties for the year 2016 from both Cropland Data Layer with the CCAP Regional Land Cover and Change. It is intresting to compare and contrast the two data sources to see any similarities or differences among the same exact areas. The type of activity that is going on in these parcels, indicates the purpose of the land whether that is argicultural, industrial, communial, or uninhabitated. These graphs also test the confidence of out data transformation. The totaling percentages from all these land uses for each parcel is equal to 100%. This is a good indication because both orginal data sets had no overlap in their geometries; therefore, no percent area crop or landcover should exceed 100%. These graphs confirm that.</p>
+<div id="northampton-cropland-data-layer-parcel-use" class="section level4">
+<h4><em>Northampton Cropland Data Layer Parcel Use</em></h4>
 <div class="figure">
-<img src="www/CDL_Parcels_plot_northampton.png" alt="Northampton" />
-<p class="caption">Northampton</p>
+<img src="www/CDL_Parcels_plot_northampton.png" />
+
 </div>
 </div>
-<div id="northampton-ccap-landcover-parcels" class="section level4">
-<h4><em>Northampton CCAP Landcover Parcels</em></h4>
+<div id="northampton-ccap-landcover-parcel-use" class="section level4">
+<h4><em>Northampton CCAP Landcover Parcel Use</em></h4>
 <div class="figure">
-<img src="www/CCAP_Northampton.png" alt="Northampton" />
-<p class="caption">Northampton</p>
+<img src="www/CCAP_Northampton.png" />
+
 </div>
-<p>As you can see in the CDL data, parcel 105-9-E has two major crops: corn and soybeans. This is a continuing theme among the whole county. More specfifically, the CDL data indicated that entire parcel is used for argicultural purposes. The CCAP data supports this. Even though the CCAP data is more general and has several different measures, the graph for parcel 105-9-E is 100% used for 'Cultivated Land'. This is a strong indication that both data sources are accurate. In the CCAP data, it is easy to see how predominate argicultural land in on the Eastern Shore. In each parcel, above 50% of the land is used for 'Cultivated Land'. In the CDL data, parcel 77B-1-1, uses about 65% of its land for corn and soy crops, but roughly 35% of that parcel is used for 'developed/ open space'. In the CCAP data, about 82% of the land in parcel 77B-1-1 is covered in 'cultivated land' and the rest of the area is used for 'low and medium intensity developed' land. While these percentages are not exact, they are following along the same lines and include the same land use purposes. In the middle of the graph, parcel 69-A-8 is used for variety.</p>
+<p>As you can see in the CDL data, parcel 105-9-E has two major crops: corn and soybeans. This is a continuing theme among the whole county. More specfifically, the CDL data indicates that the entire parcel is used for argicultural purposes. The CCAP data supports this. Even though the CCAP data is more general and has several different measures, the graph for parcel 105-9-E shows that 100% of the land is used for 'Cultivated Land'. This is a strong indication that both data sources are accurate. In the CCAP data, it is easy to see how predominate argicultural land is on the Eastern Shore. In each parcel, above 50% of the land is used for 'Cultivated Land'. Specfically, in the CDL data, parcel 77B-1-1, uses about 65% of its land for corn and soy crops, but roughly 35% of that parcel is used for 'developed/ open space'. In the CCAP data, about 82% of the land in parcel 77B-1-1 is covered in 'cultivated land' and the rest of the area is used for 'low and medium intensity developed' land. While these percentages are not exact, they are following along the same lines and include the same land use purposes. In the middle of both graphs, the land of parcel 69-A-8 has a variety of uses, spanning from crops and wetlands to developments.</p>
 </div>
-<div id="accomack-cropland-data-layer-parcels" class="section level4">
-<h4><em>Accomack Cropland data Layer Parcels</em></h4>
+<div id="accomack-cropland-data-layer-parcel-use" class="section level4">
+<h4><em>Accomack Cropland Data Layer Parcel Use</em></h4>
 <div class="figure">
-<img src="www/CDL_Parcels_plot_accomack.png" alt="Accomack" />
-<p class="caption">Accomack</p>
+<img src="www/CDL_Parcels_plot_accomack.png" />
+
 </div>
 </div>
-<div id="accomack-ccap-landcover-parcels" class="section level4">
-<h4><em>Accomack CCAP Landcover Parcels</em></h4>
-<p><img src="www/CCAP_Accomack.png" alt="Accomack" /> Below is the graph for Accomack County and three sample parcels. Just as seen in the Northampton graph, corn and soybean seem to be the predominat crop used on the Eastern Shore of Virginia. Woody Wetlands appears to be the predominate 'crop' in parcel 25-A-100, which indicates that there is very little use of that land. While parcel 109-2-A is used for a wide variety of things.</p>
+<div id="accomack-ccap-landcover-parcel-use" class="section level4">
+<h4><em>Accomack CCAP Landcover Parcel Use</em></h4>
+<p><img src="www/CCAP_Accomack.png" /> Above are the CDL and CCAP data graphs for Accomack County and its three sample parcels. Just as seen in the Northampton graphs, corn and soybean seems to be the predominate crop used. In the CDL data, 'woody wetlands' appears to be the predominate use of land in parcel 25-A-100. In the CCAP data for parcel 25-A-100, 'palustrine forested wetlands' took up roughly 60% of the land area. This is another similarity that indicates the reliablity of these two data sources. More than half the parcel's land contains forested wetlands indicating that there is very little use and development of that land. While parcel 109-2-A is used for a wide variety of things. The three top crops in the CDL data from parcel 109-2-A are 'soybeans', 'woody wetlands', and 'developed/ open space'. In the CCAP data the top two uses for the land are 'palustrine forested wetlands' and 'scrub/shrub'. The third largest percent area is 'cultivated land' and 'evergreen forest' as they using up the same amount of land. These do not line up as perfectly as some of the other parcels. However, they maintain a similar distribution and the share similar attributes. The middle of the graph shows parcel 112-A-5. Both data sources show that there is a large amount of land being used for argicultural, specifically corn.</p>
+<p>In final, the graphs from the CDL data have many similarities and roughly follow the same distribution as the CCAP data graphs. Comparing these four graphs give the total output from the data transformation added confidence. They also model an idea of the entire land use on Virginia's Eastern Shore.</p>
 </div>
 </div>
 <div id="synthetic-population" class="section level2">
