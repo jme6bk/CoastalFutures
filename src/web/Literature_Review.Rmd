@@ -5,7 +5,7 @@ output: html_document
 ##**Literature Review**
 To Kick off the project, We started making surveys on various Scholarly sources under Climates Risks and Synthetic methods. The literature review helped us to gain familiarity with various methods involved in the process. We came to know about various theories driving the field and it  helped us to curate our approach.
 
-![](www/literaturereview.png){width=40%}</center>
+![](www/literaturereview.png){width=20%}</center>
 
 ###**Categories**
 
