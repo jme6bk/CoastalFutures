@@ -5,7 +5,7 @@ output: html_document
 ##**Literature Review**
 To Kick off the project, We started making surveys on various Scholarly sources under Climates Risks and Synthetic methods. The literature review helped us to gain familiarity with various methods involved in the process. We came to know about various theories driving the field and it  helped us to curate our approach.
 
-![](www/literaturereview.png){width=20%}</center>
+![](www/literaturereview.png){width=40%}</center>
 
 ###**Categories**
 
@@ -17,7 +17,7 @@ The literatures which we took into consideration for review can be classified in
 
 ###**Climate Risks**
 Literatures under Climate risks generally contains information about negative impacts of climate change. It explains how change in climate affects lives, livelihoods, health status, economic, social and cultural assets, etc. One major effect is  **saltwater intrusion** from sea level rise and flooding.
-![](www/climatechangeeffects.png){width = 40%}
+![](www/climatechangeeffects.png){width = 10%}
 **Literatures:**
 
 - Evaluating the economic cost of coastal flooding
