@@ -7,6 +7,8 @@ library(units)
 ###################################################################
 ###################################################################
 # CDL---------
+#orginal cdl
+saveRDS(cdl_sf_Accomack, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/cdl_accomack.RDS")
 
 #corn_Accomack1
 saveRDS(corn_accomack, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/corn_accomack1.RDS")

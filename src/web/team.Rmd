@@ -3,17 +3,21 @@ title: "Team"
 ---
 
 # Interns
-![Jillian Eberhart](www/JillEberhart.png){width=40% }</center>
+
+![Jillian Eberhart](www/JillEberhart.png){width=40% }</center>  
 
 ## *Jillian Eberhart*
-Jillian is a rising third year at the Univerisity of Virginia pursuing a B.A. in Statistics with a concentration in Biostatistics and a minor in Health and Wellness. 
+Jillian is a rising third year at the University of Virginia pursuing a B.A. in Statistics with a concentration in Biostatistics and a minor in Health and Wellness. 
 
-![Kishorekarthick](www/Kishorepic.png){width=40% }</center>
+
+![Kishorekarthick](www/Kishorepic.png){width=40% }  
 ## *Kishorekarthick *
 Kishore is a graduate student at the University of Virginia doing a Masters in Computer Engineering.
 
 # Social and Decision Analytics Staff
-![Joshua Goldstein](www/Josh_pic.png){width=40% }</center>  
+
+
+![Joshua Goldstein](www/Josh_pic.png){width=40% }  
 
 ## *Joshua Goldstein*  
 Research Assistant Professor

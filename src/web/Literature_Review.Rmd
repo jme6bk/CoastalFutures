@@ -5,19 +5,26 @@ output: html_document
 ##**Literature Review**
 To Kick off the project, We started making surveys on various Scholarly sources under Climates Risks and Synthetic methods. The literature review helped us to gain familiarity with various methods involved in the process. We came to know about various theories driving the field and it  helped us to curate our approach.
 
-![](www/literaturereview.png){width=40%}</center>
+<p align="center">  
+
+![](www/literaturereview.png){width=40%}
+</p>
 
 ###**Categories**
 
-The literatures which we took into consideration for review can be classified into **two** categories.They are
+The literature which we took into consideration for review can be classified into **two** categories.They are
 
 - Climate Risks
 
 - Synthetic Methods
 
 ###**Climate Risks**
-Literatures under Climate risks generally contains information about negative impacts of climate change. It explains how change in climate affects lives, livelihoods, health status, economic, social and cultural assets, etc. One major effect is  **saltwater intrusion** from sea level rise and flooding.
-![](www/CFE.png){width = 2%}</center>
+Literature under Climate risks generally contains information about negative impacts of climate change. It explains how change in climate affects lives, livelihoods, health status, economic, social and cultural assets, etc. One major effect is  **saltwater intrusion** from sea level rise and flooding.
+
+<p align="center">  
+
+![](www/CFE.png){width=30%}  
+</p>
 **Literatures:**
 
 - Evaluating the economic cost of coastal flooding
@@ -34,7 +41,7 @@ Literatures under Climate risks generally contains information about negative im
 
 ###**Synthetic Methods**
 
-Synthetic methods generally includes literatures realted to construction of Synthetic Population. Methods for generating synthetic data include Iterative Proportional Fitting (IPF) and Multiple imputation(MI).
+Synthetic methods generally includes literature related to construction of Synthetic Population. Methods for generating synthetic data include Iterative Proportional Fitting (IPF) and Multiple imputation(MI).
 
 **Literatures:**
 
