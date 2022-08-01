@@ -23,18 +23,16 @@ The **Procedure** is :
 - IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals
   + Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households
   + To be precise it was around 896 variables
+  
 ![](www/IPFoutput.png)</center>
 
 - There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
   + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
   
-- Final step of IPF involves attaching **lat/longs** to the synthetic population. 
+- Final step of IPF involves attaching **lat/longs** to the synthetic population. For that process we took the blackknight housing data and took out the latitiudes and longitudents and performed shape file conversion and linked it to our IPF outputs.
 
-{r, layout="l-body-outset", echo = FALSE}
-library(rmarkdown)
-paged_table(readRDS("/home/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS"))
-
-
+###**Methods to improve Sophistication**s
+s
 -There are three methods to increase the sophistication. 
   + a)Choose a lat/long sampled uniformly over the Block Group
   + b) Sample from actual housing units
