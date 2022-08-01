@@ -24,6 +24,7 @@ The **Procedure** is :
   + Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households
   + To be precise it was around 896 variables
   
+####*IPF OUTPUT*  
 ![](www/IPFoutput.png)</center>
 
 - There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
