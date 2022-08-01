@@ -25,7 +25,9 @@ The **Procedure** is :
   + To be precise it was around 896 variables
   
 ####*IPF OUTPUT*  
-![](www/IPFoutput.png)</center>
+![](www/ipfoutput1.png)</center>
+
+
 
 - There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
   + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
