@@ -29,7 +29,11 @@ The **Procedure** is :
   + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
   
 - Final step of IPF involves attaching **lat/longs** to the synthetic population. 
-![](www/LATLON.png)</center>
+
+{r, layout="l-body-outset", echo = FALSE}
+library(rmarkdown)
+paged_table(readRDS("/home/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS"))
+
 
 -There are three methods to increase the sophistication. 
   + a)Choose a lat/long sampled uniformly over the Block Group
