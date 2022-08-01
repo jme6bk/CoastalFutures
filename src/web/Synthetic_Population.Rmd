@@ -32,7 +32,7 @@ The **Procedure** is :
 
 {r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
-paged_table(readRDS("/home/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS"))
+paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS"))
 
 
 -There are three methods to increase the sophistication. 

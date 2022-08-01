@@ -403,9 +403,9 @@ div.tocify {
 </center></li>
 <li>There is a <strong>Resampling process</strong> involved with microdata which is just simple <strong>random sample</strong> with replacement</li>
 <li><p>We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households</p></li>
-<li>Final step of IPF involves attaching <strong>lat/longs</strong> to the synthetic population. <img src="www/LATLON.png" />
-</center></li>
+<li><p>Final step of IPF involves attaching <strong>lat/longs</strong> to the synthetic population.</p></li>
 </ul>
+<p>{r, layout=&quot;l-body-outset&quot;, echo = FALSE} library(rmarkdown) paged_table(readRDS(&quot;/home/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS&quot;))</p>
 <p>-There are three methods to increase the sophistication. + a)Choose a lat/long sampled uniformly over the Block Group + b) Sample from actual housing units + c) Match people to housing units</p>
 </div>
 <div id="estimating-variability" class="section level3">
