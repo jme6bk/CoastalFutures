@@ -18,7 +18,7 @@ Data Sources:
 
 - Farms Under Threat
 
-####*Purpose:* 
+####*Purpose:*   
 Why are the data collected and how does the organization use the data?
 
 What is the purpose of the organization collecting the data?
@@ -83,7 +83,7 @@ Is there information available to assess the transparency and soundness of the m
 
 Is there a description of each variable in the source along with their valid values?
 
-Is there a data dictionary or codebook?
+Is there a data dictionary or code book?
 
 ####*Stability/coherence:*
 Where there changes in the data capture method and if so what were they? Were there any changes in the data sources?
@@ -102,8 +102,9 @@ Was consent given by participant? If so, how was consent given?
 
 Are there legal limitations or restrictions on the use of the data?
 
-What confidentially policies are in place?
-####*Research:*
-What research has been done with this dataset?
+What confidentially policies are in place?  
 
-The complete data inventory be download [here](https://github.com/jme6bk/CoastalFutures/blob/main/src/web/www/Data%20inventory.xlsx). 
+####*Research:*
+What research has been done with this data set?
+
+The complete data inventory be downloaded [here](https://github.com/jme6bk/CoastalFutures/blob/main/src/web/www/Data%20inventory.xlsx). 

@@ -3,77 +3,33 @@ title: "Data"
 ---
 
 ##**Cropland Data Layer**
-The purpose of the Cropland Data Layer is to use satellite imagery to provide acreage estimates to the Agricultural Statistics Board for major commodities and to produce digital, crop-specific, categorized geo-referenced output products. The spatial resolution is 30 meters covering the Continental United States. However, the data was filter to just Northampton and Accomack County for this project. The years of avaiable data for these two counties were 2021 to 2008 and 2002. The orginal CDL data can be found [here](https://croplandcros.scinet.usda.gov). 
+The purpose of the Cropland Data Layer is to use satellite imagery to provide acreage estimates to the Agricultural Statistics Board for major commodities and to produce digital, crop-specific, categorized geo-referenced output products. The spatial resolution is 30 meters covering the Continental United States. However, the data was filter to just Northampton and Accomack County for this project. The years of available data for these two counties were 2021 to 2008 and 2002. The original CDL data can be found [here](https://croplandcros.scinet.usda.gov). 
 
-The CDL data is avaiable in raster-based GeoTIFF (.TIF) file format or can be obtain as a simple features object through an R Package called 'CropScapeR'. The data was import through 'CropScapeR' because the geometry was necessary to link this Cropland Data Layer to counties' parcel geometries. The cooridinates of the CDL data are the coordinates of the centroid of the raster cells in a point geometry. From these centroids, a buffer was added to create the 30x30m resolution and polygon geometry. This was essential step to be able to intersect with the counties' parcel geometries in order to find the area of each crop in specific parcels. Two checks were in place to ensure this buffer was preformed correctly. First, an area column was added to the dataset to ensure each tile had an area of 900 square meters. Second, the first 30 tiles were simply ploted to ensure no overlap. (see plot below)
+Below is the data set for Northampton County in 2021. See Data Transformation tab in Methods to find out how this data was manipulated to serve the project's purposes.
 
-![](www/CDLTilePlot.png){width=40%}</center>
-
-From here, each tile of a specific crop type was subsetted and intersected with the ArcGIS parcel data for the two counties. Then, grouped by a specfic parcel ID, the geometries of each tile were joined within that parcel to create the coordinates of a crop within a unique parcel. Finally to obtain the percent of the crop in each parcel, the area of the crop in a parcel was divided by the total area in the parcel and multiplied by 100. Below is a example of the process with corn for Accomack county. 
-
-####*1. Start with Corn Tiles*
-
-```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
-library(rmarkdown)
-paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/corn_accomack1.RDS"))
-
-```
-Subset of Corn Tiles in Accomack County
-
-
-
-####*2. Intersect Corn Tiles with Parcel Cooridinates*
-Notice the repeat of parcel IDs. In the next step will combine all corn tiles into one geometry for one unique parcel.
-
-```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
-library(rmarkdown)
-paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/corn_accomack2.RDS"))
-```
-Corn Tiles intersection with Parcls in Accomack County
-
-
-
-####*3. Group Corn Tiles by Parcel ID*
-Notice how there are no longer repeat parcel IDs. 
-
-```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
-library(rmarkdown)
-paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/merge_corn_accomack1.RDS"))
-
-```
-Corn Area and Geometry for a Unique Parcel
-
-
-
-####*4. Attach Parcel Area and Create Percent Area Corn Column*
-All that is left is to create a column of percent corn for each parcel. This is done by linking parcel area inot the data from and doing simple math to create this column shown below.
-
-```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
-library(rmarkdown)
-paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/merge_corn_accomack2.RDS"))
-
-```
-Percent Area of Corn for Each Parcel
-
-####*5. Repetition*
-This process is repeated for each crop for each year in both Accomack and Northampton County. A function was created to automate this process. Below is an example of one of data sets for Northampton crops for the year 2021. 
 
 ```{r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Northampton2021.RDS"))
 ```
+<p align="center">  
 
-The code can be found [here](https://github.com/uva-bi-sdad/dspg22_coastal/tree/master/src/parcels) under the R scripts labeled CDL_Parcel_intersections, CDLfunction, and CDL_exploration. 
+![](www/CDL_topcrops.png){width=50%}
+
+</p>
 
 ##**C-CAP Regional Land Cover and Change**
-The Land Cover and Change data documents the types of features that cover the surface of the Earth. These data quantify how much of a region is covered by forest, wetlands, impervious surfaces, and argiculture- as well as these feature's locations. This data is avaiable every 5 years for Northampton and Accomack County. These years include 1996, 2001, 2006, 2010, 2016. CCAP data is aviable as a simple feature object. This data was manipulated similarly to the CDL data to get the percent area of land cover in each parcels. Below is a example of the CCAP data for 2016 after manipulation and a plot of 8 different types of landcover in the Eastern Shore of Virginia. 
+The Land Cover and Change data documents the types of features that cover the surface of the Earth. These data quantify how much of a region is covered by forest, wetlands, impervious surfaces, and agriculture- as well as these feature's locations. This data is available every 5 years for Northampton and Accomack County. These years include 1996, 2001, 2006, 2010, 2016. CCAP data is available as a simple feature object. This data was manipulated similarly to the CDL data to get the percent area of land cover in each parcels. Below is a example of the CCAP data for 2016 after manipulation and a plot of 8 different types of land cover in the Eastern Shore of Virginia. 
 
 ```{r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/landuse2016.RDS"))
 ```
 
-![ ](www/CCAP_plot.png)
+<p align="center">  
+
+![ ](www/CCAP_plot.png){width=60% }  
+</p>
 
 
 ##**Parcels Data**
@@ -85,16 +41,20 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/ESVAparce
 
 ```
 
-These two plots show the parcels boundaries within the two seperate counties. 
-![Eastern Shore of Virginia Parcel Plot](www/ESVAparcels.png)
+These two plots show the parcels boundaries within the two separate counties.
+
+<p align="center">  
+
+![Eastern Shore of Virginia Parcel Plot](www/ESVAparcels.png)  
+</p>
 
 ##**Housing Data**
-The Data & Analytics division of Black Knight manages the nation's leading repository of loan-level residential mortgage data and performance information. They have housing information for the Eastern Shore that includes the coordinates of the houses. This data is used as the household that the syntheic population is placed in. 
+The Data & Analytics division of Black Knight manages the nation's leading repository of loan-level residential mortgage data and performance information. They have housing information for the Eastern Shore that includes the coordinates of the houses. This data is used as the household that the synthetic population is placed in. 
 
 ##**American Community Survey**
 
 ####*ACS Public Use Microdata Sample*
-From the ACS Public Use Microdata Surevy, 3,851 unique serial number were collected from the Middle Peninsula, Northern Neck & Accomack-Northampton Planning District Commissions PUMA. This data was filtered down to age, race, household income, and tenure for each serial number and cleaned to match the terms in the ACS tables that are used to create the synthetic population. This cleaned data set is randomly sampled with replacement through the iterative proportional fitting technique to create the synthetic population and placed into households. The dataframe below shows the categories as well as the frequency of times they appear. 
+From the ACS Public Use Microdata Survey, 3,851 unique serial number were collected from the Middle Peninsula, Northern Neck & Accomack-Northampton Planning District Commissions PUMA. This data was filtered down to age, race, household income, and tenure for each serial number and cleaned to match the terms in the ACS tables that are used to create the synthetic population. This cleaned data set is randomly sampled with replacement through the iterative proportional fitting technique to create the synthetic population and placed into households. The data frame below shows the categories as well as the frequency of times they appear. 
 
 ```{r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
@@ -109,28 +69,48 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/microdata
 
 These tables all come from the year 2020 and are at the census tract level. An IPF out-put was calculated from these tables from every census tract listed below. The the serial numbers from the microdata are sampled with replacement to match each cell from the IPF output to create synthetic household. 
 
-**Northampton Census Tracts**
+**Northampton Census Tracts**  
+
 - 51-131-930100  
+
 - 51-131-930200  
+
 - 51-131-930302  
+
 - 51-131-930301  
+
 - 51-131-990100  
 
-**Accomack Census Tracts**
+
+**Accomack Census Tracts**  
+
 - 51-001-090300  
-- 51-001-090800  
-- 51-001-990200  
+
+- 51-001-090800   
+
+- 51-001-990200 
+
 - 51-001-090600  
+
 - 51-001-990100  
+
 - 51-001-090500  
-- 51-001-090700  
+
+- 51-001-090700   
+
 - 51-001-980200  
+
 - 51-001-980100  
+
 - 51-001-090202  
+
 - 51-001-090402  
+
 - 51-001-090401  
+
 - 51-001-090201  
+
 - 51-001-090102  
+
 - 51-001-090101  
 
-hey

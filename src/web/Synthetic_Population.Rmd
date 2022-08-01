@@ -3,7 +3,7 @@ title: "Synthetic Population"
 output: html_document
 ---
 ##**Synthetic Population**
-The  goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the llevel of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  
+The  goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  
 
 ##**Methodology**
 The Method used for the construction of Synthetic Population is **Iterative Proportional Fitting**.
@@ -25,7 +25,7 @@ The **Procedure** is :
   + To be precise it was around 896 variables
 ![](www/IPFoutput.png)</center>
 
-- There is a **Resampling process** invloved with microdata which is just simple **random sample** with replacement
+- There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
   + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
   
 - Final step of IPF involves attaching **lat/longs** to the synthetic population. 

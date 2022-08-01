@@ -349,6 +349,9 @@ div.tocify {
       <a href="Data_Inventory.html">Data Inventory</a>
     </li>
     <li>
+      <a href="data-transformation.html">Data Transformation</a>
+    </li>
+    <li>
       <a href="Synthetic_Population.html">Synthetic Population</a>
     </li>
   </ul>
@@ -383,8 +386,9 @@ div.tocify {
 </div>
 
 
+<p align="center">
 <img src="www/EasternShore.png" style="width:40.0%" />
-</center>
+</p>
 <div id="overview" class="section level1">
 <h1><strong>Overview</strong></h1>
 <p>This project is part of a collaboration with UVA’s Environmental Resilience Institute to study climate impacts on the rural Eastern Shore of Virginia (ESVA), with the goal of developing tools and building the capacity for communities to deal with these impacts. We will develop a synthetic population that represents these communities by combining information across multiple sources of data, administrative and survey data, to get a representation of these rural communities down to the level of individual households and farms. This will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.</p>
@@ -399,15 +403,19 @@ div.tocify {
 <h1><strong>Goals</strong></h1>
 <div id="broader" class="section level4">
 <h4><em>Broader</em></h4>
-<p>-Develop tools and building the capacity for communities to deal with the impacts of climate risk such as saltwater intrusion, accelerated sea level rise, storm flooding</p>
-<p>-Create an agent-based model to inform stakeholders' decisions</p>
-<p>-Create hydrological models to measure flood hazards, water supply, and ground water salinization</p>
+<ul>
+<li><p>Develop tools and building the capacity for communities to deal with the impacts of climate risk such as saltwater intrusion, accelerated sea level rise, storm flooding</p></li>
+<li><p>Create an agent-based model to inform stakeholders' decisions</p></li>
+<li><p>Create hydrological models to measure flood hazards, water supply, and ground water salinization</p></li>
+</ul>
 </div>
 <div id="specifically" class="section level4">
 <h4><em>Specifically</em></h4>
-<p>-Create a synthetic Population using IPF (Iterative Proportional Fitting)</p>
-<p>-Data discovery and cleaning down to the level of individual household/farm</p>
-<p>-Apply methods for demographic projections to predict how these populations will change over the next decades</p>
+<ul>
+<li><p>Create a synthetic Population using IPF (Iterative Proportional Fitting)</p></li>
+<li><p>Data discovery and cleaning down to the level of individual household/farm</p></li>
+<li><p>Apply methods for demographic projections to predict how these populations will change over the next decades</p></li>
+</ul>
 </div>
 </div>
 <div id="methods" class="section level1">
@@ -418,7 +426,11 @@ div.tocify {
 </div>
 <div id="data-inventory" class="section level4">
 <h4><em>Data Inventory</em></h4>
-<p>Explored and assessed the usability, accuracy, and biases of possible national and state data sources to create sub-county level data sets to generate a synthetic population, demographic projections, and for the use of all collaborators thoughout the course of the project</p>
+<p>Explored and assessed the usability, accuracy, and biases of possible national and state data sources to create sub-county level data sets to generate a synthetic population, demographic projections, and for the use of all collaborators throughout the course of the project</p>
+</div>
+<div id="data-transformation" class="section level4">
+<h4><em>Data Transformation</em></h4>
+<p>Manipulated Data from the Cropland Data Layer and C-CAP Regional Land Cover and Change by taking the original imported data and intersecting their geometries with parcel data from the Eastern Shore of Virginia. The purpose was the get the area of each crop/land cover in each specific parcel to help decipher if the land use agricultural or not.</p>
 </div>
 <div id="syntheic-population" class="section level4">
 <h4><em>Syntheic Population</em></h4>
@@ -432,11 +444,6 @@ div.tocify {
 <img src="www/NSF.png" />
 
 </div>
-<!-- Here's how you make a list: -->
-<!-- *Tips for making figures look good:* -->
-<!-- - Make text sizes BIG -->
-<!-- - Stick to the same colors -->
-<!-- - Decide to add titles, captions, etc in the figures OR add on the website for all figures -->
 </div>
 
 

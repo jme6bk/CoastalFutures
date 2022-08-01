@@ -2,10 +2,13 @@
 library(dplyr)
 library(ggplot2)
 library(sf)
+library(units)
 
 ###################################################################
 ###################################################################
 # CDL---------
+#orginal cdl
+saveRDS(cdl_sf_Accomack, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/cdl_accomack.RDS")
 
 #corn_Accomack1
 saveRDS(corn_accomack, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/corn_accomack1.RDS")
@@ -23,14 +26,30 @@ saveRDS(merge_corn_accomack, file = "/home/jme6bk/github/CoastalFutures/Data_and
 Northampton2021 <- Northampton2021 %>% arrange(Crop)
 saveRDS(Northampton2021, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/Northampton2021.RDS")
 
-###########################
-Northampton2021<-readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Northampton2021.RDS")
-soy_corn <- Northampton2021 %>% filter(Crop == "Corn")
-###################
-
 #Accomack CDL
-Accomack2021 <- Accomack2021 %>% arrange(Crop)
 saveRDS(Accomack2021, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomack2021.RDS")
+
+########################### graphs #######################
+# Northampton graph
+sample_parcels <- Northampton2016 %>% filter(PTM_ID %in% c("69-A-8", "105-9-E", "77B-1-1"))
+
+ggplot(sample_parcels, aes(fill=Crop, y=perc_area_crop, x=PTM_ID)) + 
+  geom_bar(position="dodge", stat="identity") +
+  scale_fill_manual(values = c("#232d4b","#2c4f6b","#0e879c","#60999a",
+                               "#d1e0bf","#d9e12b","#e6ce3a","#e6a01d","#e57200", "orange", "white")) +
+  xlab("Parcel ID") + ylab("Percent Area Crop") + ggtitle("Percent Area Crop per Parcel") +
+  theme(text = element_text(size = 20))    
+
+### Accomack graph ###
+sample_parcels <- Accomack2016 %>% filter(PTM_ID %in% c("109-2-A", "25-A-100", "112-A-5"))
+
+#CDL Parcels Plot- Accomack
+ggplot(sample_parcels, aes(fill=Crop, y=perc_area_crop, x=PTM_ID)) + 
+  geom_bar(position="dodge", stat="identity") +
+  scale_fill_manual(values = c("#232d4b","#2c4f6b","#0e879c","#60999a",
+                               "#d1e0bf","#d9e12b","#e6ce3a","#e6a01d","#e57200", "orange", "white")) +
+  xlab("Parcel ID") + ylab("Percent Area Crop") + ggtitle("Percent Area Crop per Parcel") +
+  theme(text = element_text(size = 20))    
 
 ###################################################################
 ###################################################################
@@ -59,6 +78,36 @@ ggplot() +
   theme(axis.text.x = element_text(angle=30)) +
   guides(colour = guide_legend(override.aes = list(size=1)))    
 
+############### Graph ###################
+#Northampton
+sample_landuse <- landuse2016 %>% filter(PTM_ID %in% c("69-A-8", "105-9-E", "77B-1-1"))
+sample_landuse_Northampton <- sample_landuse %>% filter(LOCALITY=="Northampton County")
+
+#CDL Parcels Plot- Northampton
+ggplot(sample_landuse_Northampton, aes(fill=use, y=perc_area_landcover, x=PTM_ID)) + 
+  geom_bar(position="dodge", stat="identity") +
+  scale_fill_manual(values = c("#232d4b","#2c4f6b","#0e879c","#60999a",
+                               "#d1e0bf","#d9e12b","#e6ce3a","#e6a01d",
+                               "#e57200", "orange", "white","#d62828", 
+                               "#ffbe0b", "#003566", "#ffd60a")) +
+  xlab("Parcel ID") + ylab("Percent Area Landcover") + ggtitle("Percent Area Landcover per Parcel") +
+  theme(text = element_text(size = 20))    
+
+#Accomack
+sample_landuse <- landuse2016 %>% filter(PTM_ID %in% c("109-2-A", "25-A-100", "112-A-5"))
+sample_landuse_Accomack <- sample_landuse %>% filter(LOCALITY=="Accomack County")
+
+
+#CDL Parcels Plot- Northampton
+ggplot(sample_landuse_Accomack, aes(fill=use, y=perc_area_landcover, x=PTM_ID)) + 
+  geom_bar(position="dodge", stat="identity") +
+  scale_fill_manual(values = c("#232d4b","#2c4f6b","#0e879c","#60999a",
+                               "#d1e0bf","#d9e12b","#e6ce3a","#e6a01d",
+                               "#e57200", "orange", "white","#d62828", 
+                               "#ffbe0b", "#003566", "#ffd60a")) +
+  xlab("Parcel ID") + ylab("Percent Area Landcover") + ggtitle("Percent Area Landcover per Parcel") +
+  theme(text = element_text(size = 20))    
+
 ###################################################################
 ###################################################################
 # Black Knight ----------------
@@ -68,25 +117,6 @@ saveRDS(AccomackBKlinkedparcels, file = "/home/jme6bk/github/CoastalFutures/Data
 
 #Northampton BlackKnight Housing
 saveRDS(NorthamptonBKlinkedparcels, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/NorthamptonBKlinkedparcels.RDS")
-
-#install API 
-readRenviron("~/.Renviron")
-Sys.getenv("USDA_API_KEY")
-
-#Get sf for Accomack and Northhampton
-Northampton <- tigris::counties(state = "51", cb = TRUE) %>% 
-  st_as_sf() %>% 
-  dplyr::filter(NAME %in% "Northampton") 
-
-table(sort(NorthamptonBKlinkedparcels$PTM_ID))
-
-# FOR FINDINGS
-ggplot(data = Northampton)+
-  geom_sf(data = Northampton) +
-  geom_sf(data = NorthamptonBKlinkedparcels, aes(color=PTM_ID, geometry = geometry)) +
-  xlab("longitude") + ylab("latitude") + 
-  ggtitle("Top 8 CCAP Data") +
-  theme(axis.text.x = element_text(angle=30))
 
 
 ###################################################################
