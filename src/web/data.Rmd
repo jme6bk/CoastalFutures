@@ -15,7 +15,6 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Northampt
 <p align="center">  
 
 ![](www/CDL_topcrops.png){width=50%}
-
 </p>
 
 ##**C-CAP Regional Land Cover and Change**

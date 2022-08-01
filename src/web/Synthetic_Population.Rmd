@@ -2,8 +2,7 @@
 title: "Synthetic Population"
 output: html_document
 ---
-##**Synthetic Population**
-The  goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  
+The  goal of the project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  
 
 ##**Methodology**
 The Method used for the construction of Synthetic Population is **Iterative Proportional Fitting**.
@@ -36,11 +35,11 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 
 
 
-- There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
-  + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
-  
+- There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement  
 
-- Final step of IPF involves attaching **lat/longs** to the synthetic population.For that process we took the blackknight housing data and took out the latitiudes and longitudes and performed shape file conversion and linked it to our IPF outputs. 
+-  We sampled SERIALNO from the ACS PUMS data tables (see data - ACS) that matches each cell from the ipf output to create synthetic population  
+
+- Final step of IPF involves attaching household geometry to the synthetic population. For that process we took the blackknight housing data, performed shape file conversion to abstract the latitiudes and longitudes and linked the coordinates with thier unique housing IDs to our IPF outputs. 
 
 
 ####*Northampton Synthetic Population*
@@ -57,14 +56,13 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomacks
 ```
 
 
-
-
 ###**Methods to improve Sophistication**
 
 - There are three methods to increase Sophistication
      + Choose a lat/long sampled uniformly over the Block Group
      + Sample from actual housing units
      + Match people to housing units
+     + Link IPF output and households based on income, taxes, and property value
   
 
 ###**Estimating Variability**
