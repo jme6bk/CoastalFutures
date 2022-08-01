@@ -15,10 +15,9 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Northampt
 <p align="center">  
 
 ![](www/CDL_topcrops.png){width=50%}
-
 </p>
 
-##**C-CAP Regional Land Cover and Change**p
+##**C-CAP Regional Land Cover and Change**
 The Land Cover and Change data documents the types of features that cover the surface of the Earth. These data quantify how much of a region is covered by forest, wetlands, impervious surfaces, and agriculture- as well as these feature's locations. This data is available every 5 years for Northampton and Accomack County. These years include 1996, 2001, 2006, 2010, 2016. CCAP data is available as a simple feature object. This data was manipulated similarly to the CDL data to get the percent area of land cover in each parcels. Below is a example of the CCAP data for 2016 after manipulation and a plot of 8 different types of land cover in the Eastern Shore of Virginia. 
 
 ```{r, layout="l-body-outset", echo = FALSE}

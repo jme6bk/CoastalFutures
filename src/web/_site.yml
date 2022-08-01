@@ -25,7 +25,11 @@ navbar:
         - text: Synthetic Population
           href: Synthetic_Population.html
     - text: "Findings"
-      href: findings-overview.html
+      menu:
+        - text: Cropland Data Layer & CCAP Regional Land Cover and Change
+          href: Findings-CDLandCCAP.html
+        - text: Synthetic Population
+          href: Findings-SyntheticPopulation.html
     - text: "Team"
       href: team.html
     - text: ""
