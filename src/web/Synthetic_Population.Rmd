@@ -29,6 +29,9 @@ The **Procedure** is :
 
 
 
+
+
+
 - There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
   + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
   
