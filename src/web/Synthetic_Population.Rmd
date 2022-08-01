@@ -25,11 +25,30 @@ The **Procedure** is :
   + To be precise it was around 896 variables
 ![](www/IPFoutput.png)</center>
 
+```{r, layout="l-body-outset", echo = FALSE}
+library(rmarkdown)
+paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_output.RDS"))
+```
+
+
 - There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
   + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
   
 - Final step of IPF involves attaching **lat/longs** to the synthetic population. 
-![](www/LATLON.png)</center>
+
+
+####*Northampton Synthetic Population*
+```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
+library(rmarkdown)
+paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/NorthamptonsampledfSF.RDS"))
+
+```
+####*Accomack Synthetic Population*
+```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
+library(rmarkdown)
+paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS"))
+
+```
 
 -There are three methods to increase the sophistication. 
   + a)Choose a lat/long sampled uniformly over the Block Group

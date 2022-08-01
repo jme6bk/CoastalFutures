@@ -136,4 +136,62 @@ saveRDS(microdata, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/mic
 #Parcel data -------------
 saveRDS(ESVAparcels, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/ESVAparcels.RDS")
 
+###################################################################
+###################################################################
+#IPF OUT PUT
+saveRDS(Linkeddfs, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/Total_IPF_Output.RDS")
 
+saveRDS(NorthamptonsampledfSF, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/NorthamptonsampledfSF.RDS")
+
+saveRDS(dfx, file =  "/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_output.RDS")
+
+saveRDS(AccomacksampledfSF, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS")
+
+VA_2_county <- tigris::counties(state = "51", cb = TRUE) %>% 
+  st_as_sf() %>% 
+  dplyr::filter(NAME %in% c("Accomack", "Northampton")) 
+
+## Race ##
+
+ggplot(VA_2_county) +
+  geom_sf(data = VA_2_county) +
+  geom_sf(data = AccomacksampledfSF, aes(color = race, geometry = geometry), size = 0.5) +
+  geom_sf(data = NorthamptonsampledfSF, aes(color = race, geometry = geometry), size = 0.5) +
+  xlab("longitude") + ylab("latitude") + 
+  ggtitle("Household Synthetic Population by Race")
+
+### Bar graph for Race
+
+linked_sampled_fSF <- rbind(AccomacksampledfSF, NorthamptonsampledfSF)
+
+ggplot(linked_sampled_fSF, aes(x = race, fill = tenure)) + 
+  geom_bar(fill = c("#E57200","#2c4f6b","#0e879c","#60999a",
+                               "#d1e0bf","#E6CE3A")) +
+  xlab("Race") + ylab("Count") + ggtitle("Synthetic Household by Race") +
+  theme(text = element_text(size = 20)) +
+  theme(axis.text.x = element_text(angle=15)) 
+  
+
+
+## Income ##
+
+ggplot(VA_2_county) +
+  geom_sf(data = VA_2_county) +
+  geom_sf(data = AccomacksampledfSF, aes(color = income, geometry = geometry), size = 0.5) +
+  geom_sf(data = NorthamptonsampledfSF, aes(color = income, geometry = geometry), size = 0.5) +
+  xlab("longitude") + ylab("latitude") + 
+  ggtitle("Household Synthetic Population by Income")
+
+
+ggplot(linked_sampled_fSF, aes(x = income, fill = tenure)) + 
+  geom_bar() +
+  xlab("Income") + ylab("Count") + ggtitle("Synthetic Household by Income") +
+  theme(text = element_text(size = 20)) +
+  theme(axis.text.x = element_text(angle=15)) +
+  scale_fill_manual(values = c("#2c4f6b","#e57200")) 
+
+ggplot(linked_sampled_fSF, aes(x = income, fill = age)) + 
+  geom_bar() +
+  xlab("Income") + ylab("Count") + ggtitle("Synthetic Household by Income") +
+  theme(text = element_text(size = 20)) +
+  theme(axis.text.x = element_text(angle=15)) 
