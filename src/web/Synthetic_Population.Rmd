@@ -35,11 +35,12 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 ```
 
 
+
 - There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement
   + We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households
   
-<<<<<<< HEAD
-- Final step of IPF involves attaching **lat/longs** to the synthetic population. 
+
+- Final step of IPF involves attaching **lat/longs** to the synthetic population.For that process we took the blackknight housing data and took out the latitiudes and longitudes and performed shape file conversion and linked it to our IPF outputs. 
 
 
 ####*Northampton Synthetic Population*
@@ -54,9 +55,9 @@ library(rmarkdown)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS"))
 
 ```
-=======
-- Final step of IPF involves attaching **lat/longs** to the synthetic population. For that process we took the blackknight housing data and took out the latitiudes and longitudents and performed shape file conversion and linked it to our IPF outputs.
->>>>>>> b670ed21c8a6a801419e319877ea09a9cdbf1b6c
+
+
+
 
 ###**Methods to improve Sophistication**
 
