@@ -31,12 +31,13 @@ The **Procedure** is :
   
 - Final step of IPF involves attaching **lat/longs** to the synthetic population. For that process we took the blackknight housing data and took out the latitiudes and longitudents and performed shape file conversion and linked it to our IPF outputs.
 
-###**Methods to improve Sophistication**s
-s
+###**Methods to improve Sophistication**
+
 -There are three methods to increase the sophistication. 
   + a)Choose a lat/long sampled uniformly over the Block Group
   + b) Sample from actual housing units
   + c) Match people to housing units
+  
 
 ###**Estimating Variability**
 

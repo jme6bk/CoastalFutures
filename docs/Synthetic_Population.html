@@ -399,13 +399,18 @@ div.tocify {
 <ul>
 <li>IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals</li>
 <li>Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households</li>
-<li>To be precise it was around 896 variables <img src="www/IPFoutput.png" />
-</center></li>
+<li>To be precise it was around 896 variables</li>
+</ul>
+<img src="www/IPFoutput.png" />
+</center>
+<ul>
 <li>There is a <strong>Resampling process</strong> involved with microdata which is just simple <strong>random sample</strong> with replacement</li>
 <li><p>We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households</p></li>
-<li><p>Final step of IPF involves attaching <strong>lat/longs</strong> to the synthetic population.</p></li>
+<li><p>Final step of IPF involves attaching <strong>lat/longs</strong> to the synthetic population. For that process we took the blackknight housing data and took out the latitiudes and longitudents and performed shape file conversion and linked it to our IPF outputs.</p></li>
 </ul>
-<p>{r, layout=&quot;l-body-outset&quot;, echo = FALSE} library(rmarkdown) paged_table(readRDS(&quot;/home/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS&quot;))</p>
+</div>
+<div id="methods-to-improve-sophistication" class="section level3">
+<h3><strong>Methods to improve Sophistication</strong></h3>
 <p>-There are three methods to increase the sophistication. + a)Choose a lat/long sampled uniformly over the Block Group + b) Sample from actual housing units + c) Match people to housing units</p>
 </div>
 <div id="estimating-variability" class="section level3">
