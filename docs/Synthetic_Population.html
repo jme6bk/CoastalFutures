@@ -401,10 +401,16 @@ div.tocify {
 <ul>
 <li>IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals</li>
 <li>Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households</li>
-<li>To be precise it was around 896 variables <img src="www/IPFoutput.png" />
-</center></li>
+<li>To be precise it was around 896 variables</li>
+</ul>
+<div id="ipf-output" class="section level4">
+<h4><em>IPF OUTPUT</em></h4>
+<img src="www/IPFoutput.png" />
+</center>
+<ul>
 <li>There is a <strong>Resampling process</strong> involved with microdata which is just simple <strong>random sample</strong> with replacement</li>
 <li><p>We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households</p></li>
+<<<<<<< HEAD
 <li><p>Final step of IPF involves attaching <strong>lat/longs</strong> to the synthetic population.</p></li>
 </ul>
 <div id="northampton-synthetic-population" class="section level4">
@@ -423,6 +429,22 @@ div.tocify {
   </script>
 </div>
 <p>-There are three methods to increase the sophistication. + a)Choose a lat/long sampled uniformly over the Block Group + b) Sample from actual housing units + c) Match people to housing units</p>
+=======
+<li><p>Final step of IPF involves attaching <strong>lat/longs</strong> to the synthetic population. For that process we took the blackknight housing data and took out the latitiudes and longitudents and performed shape file conversion and linked it to our IPF outputs.</p></li>
+</ul>
+</div>
+</div>
+<div id="methods-to-improve-sophistication" class="section level3">
+<h3><strong>Methods to improve Sophistication</strong></h3>
+<ul>
+<li>There are three methods to increase Sophistication
+<ul>
+<li>Choose a lat/long sampled uniformly over the Block Group</li>
+<li>Sample from actual housing units</li>
+<li>Match people to housing units</li>
+</ul></li>
+</ul>
+>>>>>>> b670ed21c8a6a801419e319877ea09a9cdbf1b6c
 </div>
 </div>
 <div id="estimating-variability" class="section level3">

@@ -25,6 +25,7 @@ Literature under Climate risks generally contains information about negative imp
 
 ![](www/CFE.png){width=30%}  
 </p>
+
 **Literatures:**
 
 - Evaluating the economic cost of coastal flooding
@@ -39,6 +40,10 @@ Literature under Climate risks generally contains information about negative imp
 
 - Sea Level Rise and Coastal Forest Retreat on the West Coast of Florida, USA
 
+<p align="center">  
+
+![](www/SLR.png){width=30%}  
+</p>
 ###**Synthetic Methods**
 
 Synthetic methods generally includes literature related to construction of Synthetic Population. Methods for generating synthetic data include Iterative Proportional Fitting (IPF) and Multiple imputation(MI).
