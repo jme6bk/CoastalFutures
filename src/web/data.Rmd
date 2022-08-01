@@ -41,7 +41,7 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/ESVAparce
 
 ```
 
-These two plots show the parcels boundaries within the two separate counties of Northampton and Accomack.
+These two plots show the parcels boundaries within the two separate counties.
 
 <p align="center">  
 
