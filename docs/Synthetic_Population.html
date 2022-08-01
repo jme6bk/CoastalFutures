@@ -377,9 +377,45 @@ div.tocify {
 </div>
 
 
-<div id="syntheic-population" class="section level2">
-<h2><strong>Syntheic Population</strong></h2>
-<p>EXPLAIN PROCESS HERE</p>
+<div id="synthetic-population" class="section level2">
+<h2><strong>Synthetic Population</strong></h2>
+<p>The goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the llevel of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.</p>
+</div>
+<div id="methodology" class="section level2">
+<h2><strong>Methodology</strong></h2>
+<p>The Method used for the construction of Synthetic Population is <strong>Iterative Proportional Fitting</strong>.</p>
+<p>IPF estimates a joint table given marginal constraints</p>
+<p>The <strong>Procedure</strong> is :</p>
+<ol style="list-style-type: decimal">
+<li><p>Adjust cells using marginal column totals; divide by (cell column sums/ marginal column totals)</p></li>
+<li><p>Adjust cells using marginal row totals; divide by (cell row sums/ marginal row totals)</p></li>
+<li><p>Iterate (1) and (2) until convergence</p></li>
+</ol>
+<div id="resampling-and-adding-locations" class="section level3">
+<h3><strong>Resampling and adding locations</strong></h3>
+<ul>
+<li>IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals</li>
+<li>Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households</li>
+<li>To be precise it was around 896 variables <img src="www/IPFoutput.png" />
+</center></li>
+<li>There is a <strong>Resampling process</strong> invloved with microdata which is just simple <strong>random sample</strong> with replacement</li>
+<li><p>We sampled SERIALNO from the microdata table that matches each cell from the ipf output to create synthetic households</p></li>
+<li>Final step of IPF involves attaching <strong>lat/longs</strong> to the synthetic population. <img src="www/LATLON.png" />
+</center></li>
+</ul>
+<p>-There are three methods to increase the sophistication. + a)Choose a lat/long sampled uniformly over the Block Group + b) Sample from actual housing units + c) Match people to housing units</p>
+</div>
+<div id="estimating-variability" class="section level3">
+<h3><strong>Estimating Variability</strong></h3>
+<ul>
+<li><p>To account for the error in the IPF procedure, we can repeat the steps over multiple runs for sample-based error estimates.</p></li>
+<li><p>To account for the sampling variability, resample the marginal tables for each run.</p></li>
+</ul>
+</div>
+<div id="r-implementatiom" class="section level3">
+<h3><strong>R Implementatiom</strong></h3>
+<p>In order to implement IPF procedure in R, there is a package called <strong>mipfp</strong></p>
+</div>
 </div>
 
 
