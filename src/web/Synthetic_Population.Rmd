@@ -33,10 +33,10 @@ The **Procedure** is :
 
 ###**Methods to improve Sophistication**
 
--There are three methods to increase the sophistication. 
-  + a)Choose a lat/long sampled uniformly over the Block Group
-  + b) Sample from actual housing units
-  + c) Match people to housing units
+- There are three methods to increase Sophistication
+   + Choose a lat/long sampled uniformly over the Block Group
+   + Sample from actual housing units
+   + Match people to housing units
   
 
 ###**Estimating Variability**
