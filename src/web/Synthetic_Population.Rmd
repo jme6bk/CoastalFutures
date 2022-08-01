@@ -2,7 +2,6 @@
 title: "Synthetic Population"
 output: html_document
 ---
-##**Synthetic Population**
 The  goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  
 
 ##**Methodology**
@@ -21,7 +20,9 @@ The **Procedure** is :
 ###**Resampling and adding locations**
 
 - IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals
+
   + Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households
+  
   + To be precise it was around 896 variables
   
 ####*IPF OUTPUT*  
@@ -62,8 +63,11 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomacks
 ###**Methods to improve Sophistication**
 
 - There are three methods to increase Sophistication
+
      + Choose a lat/long sampled uniformly over the Block Group
+     
      + Sample from actual housing units
+     
      + Match people to housing units
   
 
