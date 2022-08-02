@@ -2,10 +2,14 @@
 title: "Synthetic Population"
 output: html_document
 ---
+<<<<<<< HEAD
+The  goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  The use of synthetic populations is an approach that can retain aggregate population characteristics at larger community levels (e.g., Census block, neighborhood, farming sector) while constructing “synthetic” households using imputation methods without  compromising  privacy.
+=======
 The  goal of the project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  
+>>>>>>> 211a5fefc146e38d65eb3a3b6366c178a5d50124
 
 ##**Methodology**
-The Method used for the construction of Synthetic Population is **Iterative Proportional Fitting**.
+The Method used for the construction of Synthetic Population is **Iterative Proportional Fitting** because IPF is computationally efficient  and it involves resampling from microdata and can include housing data for more precise sub-block group estimation.
 
 IPF estimates a joint table given marginal constraints
 
@@ -20,7 +24,9 @@ The **Procedure** is :
 ###**Resampling and adding locations**
 
 - IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals
+
   + Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households
+  
   + To be precise it was around 896 variables
   
 ####*IPF OUTPUT*  
@@ -28,8 +34,9 @@ The **Procedure** is :
 
 
 
+
 ```{r, layout="l-body-outset", echo = FALSE}
-library(DT)
+library(rmarkdown)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_output.RDS"))
 ```
 
@@ -59,8 +66,11 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomacks
 ###**Methods to improve Sophistication**
 
 - There are three methods to increase Sophistication
+
      + Choose a lat/long sampled uniformly over the Block Group
+     
      + Sample from actual housing units
+     
      + Match people to housing units
      + Link IPF output and households based on income, taxes, and property value
   
