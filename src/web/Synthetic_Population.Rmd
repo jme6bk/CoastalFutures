@@ -29,7 +29,7 @@ The **Procedure** is :
 
 
 ```{r, layout="l-body-outset", echo = FALSE}
-library(rmarkdown)
+library(DT)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_output.RDS"))
 ```
 
@@ -45,13 +45,13 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 ####*Northampton Synthetic Population*
 ```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
 library(rmarkdown)
-paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/NorthamptonsampledfSF.RDS"))
+paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/NorthamptonsampledfSF_Coords.RDS"))
 
 ```
 ####*Accomack Synthetic Population*
 ```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
 library(rmarkdown)
-paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/AccomacksampledfSF.RDS"))
+paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/AccomacksampledfSF_Coords.RDS"))
 
 ```
 
