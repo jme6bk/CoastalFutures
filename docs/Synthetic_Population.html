@@ -394,10 +394,10 @@ div.tocify {
 </div>
 
 
-<p>The goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization. The use of synthetic populations is an approach that can retain aggregate population characteristics at larger community levels (e.g., Census block, neighborhood, farming sector) while constructing “synthetic” households using imputation methods without compromising privacy.</p>
+<p>The goal of our project is to impute a synthetic population that represents Accomack and Northampton communities by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization. The use of synthetic populations is an approach that can retain aggregate population characteristics at larger community levels (e.g., Census block, neighborhood, farming sector) while constructing “synthetic” households using imputation methods without compromising privacy.</p>
 <div id="methodology" class="section level3">
 <h3><strong>Methodology</strong></h3>
-<p>The Method used for the construction of Synthetic Population is <strong>Iterative Proportional Fitting</strong> because IPF is computationally efficient and it involves resampling from microdata and can include housing data for more precise sub-block group estimation. In order to implement IPF procedure in R, there is a package called <strong>mipfp</strong>.</p>
+<p>The method we used for the construction of Synthetic Population is <strong>Iterative Proportional Fitting</strong>. IPF is computationally efficient,involves resampling from microdata and can include housing data for more precise sub-block group estimation. In order to implement IPF procedure in R, we use the package <strong>mipfp</strong>.</p>
 <p>IPF estimates a joint table given marginal constraints</p>
 <p>The <strong>Procedure</strong> is :</p>
 <ol style="list-style-type: decimal">
@@ -411,7 +411,7 @@ div.tocify {
 <ul>
 <li><p>IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals</p></li>
 <li><p>Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households</p></li>
-<li><p>To be precise it was around 896 variables</p></li>
+<li><p>The result is a realization of synthetic households over the ESVA with attached housing characteristics and census sociodemographic data.</p></li>
 </ul>
 <div id="ipf-output" class="section level4">
 <h4><strong>IPF Output</strong></h4>
@@ -459,31 +459,16 @@ div.tocify {
 </div>
 </div>
 </div>
-<div id="methods-to-improve-sophistication" class="section level3">
-<h3><strong>Methods to improve Sophistication</strong></h3>
-<ul>
-<li><p>There are four methods to increase Sophistication</p>
-<ul>
-<li><p>Choose a lat/long sampled uniformly over the Block Group</p></li>
-<li><p>Sample from actual housing units</p></li>
-<li><p>Match people to housing units</p></li>
-<li><p>Link IPF output and households based on income, taxes, and property value</p></li>
-</ul></li>
-</ul>
-</div>
-<div id="disadvantages-of-ipf" class="section level3">
-<h3><strong>Disadvantages of IPF:</strong></h3>
-<ul>
-<li><p>Iterative Proportional Fitting finds the maximum likelihood estimation; this is a modal solution</p></li>
-<li><p>Synthetic samples are draws from the microdata that have been repeated multiple times. Some applications, prefer to have unique samples (e.g. identifiability study for HUD)</p></li>
-</ul>
-</div>
 <div id="estimating-variability" class="section level3">
 <h3><strong>Estimating Variability</strong></h3>
 <ul>
 <li><p>To account for the error in the IPF procedure, we can repeat the steps over multiple runs for sample-based error estimates.</p></li>
-<li><p>To account for the sampling variability, resample the marginal tables for each run.</p></li>
+<li><p>To account for the sampling variability, resample the marginal tables for each run using ACS margins of error.</p></li>
 </ul>
+</div>
+<div id="improving-household-assignment" class="section level3">
+<h3>**Improving Household Assignment</h3>
+<p>Synthetic households from IPF output are assigned to actual housing units using tax data. Currently this assignment is done at random within a given census tract. As a next step, we will weight the assignment between synthetic households and real housing units probabilistically based on e.g. income, taxes, and property value.</p>
 </div>
 
 

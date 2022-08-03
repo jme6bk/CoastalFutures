@@ -425,12 +425,16 @@ ggplot() +
   theme(text = element_text(size = 20)) + 
   scale_fill_continuous(high = "#132B43", low = "#56B1F7")
 
+#limits = c(0,42))
+
 #Under 25
 ggplot() +
   geom_sf(plot_under_25, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
   ggtitle("Percent Distribution of Population Under 25") + xlab('Longitude') + ylab("Latitude") +
   theme(text = element_text(size = 20)) + 
   scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#limits = c(0,42))
 
 #45 - 64
 ggplot() +
@@ -439,9 +443,14 @@ ggplot() +
   theme(text = element_text(size = 20)) + 
   scale_fill_continuous(high = "#132B43", low = "#56B1F7")
 
+#limits = c(0,42))
+
 #25 - 44
 ggplot() +
   geom_sf(plot_25_44, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
   ggtitle("Percent Distribution of Population Ages 25 to 44 ") + xlab('Longitude') + ylab("Latitude") +
   theme(text = element_text(size = 20)) + 
   scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#limits = c(0,42))
+
