@@ -392,21 +392,22 @@ div.tocify {
 </div>
 
 
-<p>To examine the synthetic population more in depth and highlight the vulnerable population most effected by climate change in Northampton and Accomack county, lets look into some initial exploratory data analysis of the synthetic population of 17,401 people.</p>
+<p>To examine the synthetic population more in depth and highlight the vulnerable population most effected by climate change in Northampton and Accomack county, lets look into some initial exploratory data analysis of the synthetic population of 17,401 householders.</p>
 <div id="race" class="section level2">
 <h2>Race</h2>
 <p align="center">
-<img src="www/IPF_race.png" style="width:60.0%" />
-</p>
-<p align="center">
 <img src="www/Race_Tenure.png" />
 </p>
-<p>Above is a plot of the race distribution of the household synthetic population geographically. As well as a bar graph showing the distribution of race by tenure in the population. AIAN is abbreviated for American Indians and Alaska Native. Based on the IPF output, the population consists of mostly white and black people evenly dispersed throughout the Eastern Shore; However, looking more closely at the bar graph, the vast majority of the population is white. People who are white are more likely to own their home and people who are black tend to be more likely to rent their home.</p>
+<hr />
+<p align="center">
+<img src="www/White_Plot.png" style="width:40.0%" /> <img src="www/Black_Plot.png" style="width:40.0%" />
+</p>
+<p>Above is a plot for the percent of each race aggregated from the household synthetic population to the census tract. As well as a bar graph showing the distribution of race by tenure in the population. AIAN is abbreviated for American Indians and Alaska Native. The population consists of mostly white and black people throughout the Eastern Shore with the vast majority of the population being white. It is important to note that the synthic population is based acs data about 'householders'. This is going to have a definent effect on the demographics of the population. There is clear split in the plots for the percentage population white vs black in each census tract. This is not unexpected as the majority of the population is made up of those two races. Accomack County has a higher white population percentage than Northampton County. In contrast, Northampton has a higer black population percentage. Northampton is also a smaller county than Accomack. The bar graph shows that people who are white are more likely to own their home and people who are black tend to be more likely to rent their home.</p>
 </div>
 <div id="income" class="section level2">
 <h2>Income</h2>
 <p align="center">
-<img src="www/IPF_Income.png" style="width:60.0%" />
+<img src="www/Income_Plot.png" style="width:60.0%" />
 </p>
 <p>This plot shows the income level distribution of the household synthetic population geographically. This plot appears to have more clustering in specific regions compared to the synthetic population by race plot.</p>
 <p align="center">
@@ -421,7 +422,7 @@ div.tocify {
 <div id="age" class="section level2">
 <h2>Age</h2>
 <p align="center">
-<img src="www/IPF_age.png" style="width:60.0%" />
+<img src="www/Age_Plot.png" style="width:60.0%" />
 </p>
 <p align="center">
 <div class="figure">
@@ -429,7 +430,7 @@ div.tocify {
 
 </div>
 </p>
-<p>Above is a plot of the age distribution of the household synthetic population geographically. As well as a bar graph showing the distribution of age by race in the population. The older population is much larger than the younger population. This indicates the population may be declining in the area, but no conclusions can be drawn unless looking at the population overtime. The major race present is white. This is expected as they make up the majority of the population. The black population is largely distributed in the 45-64 age range, while the white population is largely made up of ages 65 and up. The age distribution by race is a helpful way to see the demographics of the labor workers in this rural community.</p>
+<p>Above is a plot of the age distribution of the household synthetic population geographically. As well as a bar graph showing the distribution of age by race in the population. The older population is much larger than the younger population. This is not unexpected as the data consist of householders. It is more probable that a person 65 or older is a householder, rather than a person in the age reang 0 to 24 years old. The graph shows, the major race present is white. This is expected as the white ethnicity makes up the majority of the population. The black population is largely distributed in the 45-64 age range, while the white population is largely made up of ages 65 and up. The age distribution by race is a helpful way to see the demographics of the labor workers in this rural community.</p>
 <div id="next-steps" class="section level4">
 <h4><em>Next Steps</em></h4>
 <p>The next step in the synthetic population is to attach household not at random, but based off the income level of the individual and property value of the household from the Black Knight data. This will give a more accurate representation of the real population. From here, the goal would be to preform demographic projections through a co-hort component method to create future population. These future population will be used in the agent-based models to see the possible effects of climate change on the Eastern Shore.</p>
