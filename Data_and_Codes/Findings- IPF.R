@@ -197,14 +197,8 @@ ggplot() +
 ################################################################################
 
 #INCOME---------------
-intersect <- rbind(intersect_Northampton, intersect_Accomack)
 
-#Sum total people in each tract
-Sum<-intersect%>%
-  group_by(GEOID)%>%
-  summarise(Count=n())
-
-#plot
+#plot 1- change to viridis scale
 ggplot() +  
   geom_sf(data = linked_sampled_fSF, size = 0.5, aes(color = income, fill = income, geometry = geometry)) +
   scale_color_viridis(discrete = TRUE, option = "D") +
@@ -214,8 +208,135 @@ ggplot() +
   theme(text = element_text(size = 20)) 
 
 
-breaks <- c("Less than 10,000", "10,000-14,999","15,000-19,999", "20,000-24,999","25,000-29,999",
-            "30,000-34,999","35,000-39,999","40,000-44,999", "45,000-49,999", "50,000-59,999", 
-            "60,000-74,999 "," 75,000-99,999 ", "100,000-124,999", 
-            "125,000-149,999", "150,000-199,999", "200,000 or more")
-            
+intersect <- rbind(intersect_Northampton, intersect_Accomack)
+
+#Sum total people in each tract
+Sum<-intersect%>%
+  group_by(GEOID)%>%
+  summarise(Count=n())
+
+# find the % of people that make max income in the area
+tract1 <- intersect %>% filter(GEOID %in% "51001090101")
+(sort(table(tract1$income)))
+
+tract2 <- intersect %>% filter(GEOID %in% "51001090102")
+(sort(table(tract2$income)))
+
+tract3 <- intersect %>% filter(GEOID %in% "51001090201")
+(sort(table(tract3$income)))
+
+tract4 <- intersect %>% filter(GEOID %in% "51001090202")
+(sort(table(tract4$income)))
+
+tract5 <- intersect %>% filter(GEOID %in% "51001090300")
+(sort(table(tract5$income)))
+
+tract6 <- intersect %>% filter(GEOID %in% "51001090401")
+(sort(table(tract6$income)))
+
+tract7 <- intersect %>% filter(GEOID %in% "51001090402")
+(sort(table(tract7$income)))
+
+tract8 <- intersect %>% filter(GEOID %in% "51001090500")
+(sort(table(tract8$income)))
+
+tract9 <- intersect %>% filter(GEOID %in% "51001090600")
+(sort(table(tract9$income)))
+
+tract10 <- intersect %>% filter(GEOID %in% "51001090700")
+(sort(table(tract10$income)))
+
+tract11 <- intersect %>% filter(GEOID %in% "51001090800")
+(sort(table(tract11$income)))
+
+tract12 <- intersect %>% filter(GEOID %in% "51131930100")
+(sort(table(tract12$income)))
+
+tract13 <- intersect %>% filter(GEOID %in% "51131930200")
+(sort(table(tract13$income)))
+
+tract14 <- intersect %>% filter(GEOID %in% "51131930301")
+(sort(table(tract14$income)))
+
+tract15 <- intersect %>% filter(GEOID %in% "51131930302")
+(sort(table(tract15$income)))
+
+income_75_100 <- c(139, 132, 331, 105, 90, 77, 117, 91, 166, 221, 118, 198, 188, 168, 118)
+income_less_than_10 <- c(55, 50, 139, 66, 38, 37, 51, 49, 90, 71, 59, 128, 126, 110, 69)
+income_more_than_200 <- c(24, 18, 71, 29, 17, 14, 17, 22, 25, 34, 26, 64, 71, 61, 41)
+
+#Link to Sum dataframe and get percentage column
+plot <- cbind(Sum, income_75_100, income_less_than_10, income_more_than_200)
+
+plot_most_frequent_income <- plot %>% mutate(Percent_of_Population = (income_75_100/Count)*100)
+plot_lowest_income <-  plot %>% mutate(Percent_of_Population = (income_less_than_10/Count)*100)
+plot_highest_income <- plot %>% mutate(Percent_of_Population = (income_more_than_200/Count)*100)
+
+saveRDS(plot_most_frequent_income, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/plot_most_frequent_income.RDS")
+saveRDS(plot_lowest_income, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/plot_lowest_income.RDS")
+saveRDS(plot_highest_income, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/plot_highest_income.RDS")
+
+#plot 2- most frequenct in 75,000-99,999 distrubution
+ggplot() +
+  geom_sf(plot, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
+  ggtitle("Percent Distribution of Population making $75,000-$99,999") + xlab('Longitude') + ylab("Latitude") +
+  theme(text = element_text(size = 20)) + 
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#plot 2- lowest income distrubution
+ggplot() +
+  geom_sf(plot_lowest_income, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
+  ggtitle("Percent Distribution of Population making Less than $10,000") + xlab('Longitude') + ylab("Latitude") +
+  theme(text = element_text(size = 20)) + 
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#plot 2- highest income distrubution
+ggplot() +
+  geom_sf(plot_highest_income, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
+  ggtitle("Percent Distribution of Population more than $200,000") + xlab('Longitude') + ylab("Latitude") +
+  theme(text = element_text(size = 20)) + 
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+
+# make income a continous variable
+
+# breaks <- c("Less than 10,000", "10,000-14,999","15,000-19,999", "20,000-24,999","25,000-29,999",
+#             "30,000-34,999","35,000-39,999","40,000-44,999", "45,000-49,999", "50,000-59,999", 
+#             "60,000-74,999 "," 75,000-99,999 ", "100,000-124,999", 
+#             "125,000-149,999", "150,000-199,999", "200,000 or more")
+
+linked_sampled_fSF <- rbind(AccomacksampledfSF, NorthamptonsampledfSF)
+
+
+linked_gsub <- linked_sampled_fSF %>% mutate(income1 = gsub("Less than 10,000", 8000, income))
+linked_gsub <- linked_gsub %>% mutate(income2 = gsub("10,000-14,999", 12000, income1))
+linked_gsub <- linked_gsub %>% mutate(income3 = gsub("15,000-19,999", 17000, income2))
+linked_gsub <- linked_gsub %>% mutate(income4 = gsub("20,000-24,999", 22000, income3))
+linked_gsub <- linked_gsub %>% mutate(income5 = gsub("25,000-29,999", 27000, income4))
+linked_gsub <- linked_gsub %>% mutate(income6 = gsub("30,000-34,999", 32000, income5))
+linked_gsub <- linked_gsub %>% mutate(income7 = gsub("35,000-39,999", 37000, income6))
+linked_gsub <- linked_gsub %>% mutate(income8 = gsub("40,000-44,999", 42000, income7))
+linked_gsub <- linked_gsub %>% mutate(income9 = gsub("45,000-49,999", 47000, income8))
+linked_gsub <- linked_gsub %>% mutate(income10 = gsub("50,000-59,999", 55000, income9))
+linked_gsub <- linked_gsub %>% mutate(income11 = gsub("60,000-74,999", 68000, income10))
+linked_gsub <- linked_gsub %>% mutate(income12 = gsub("75,000-99,999", 85000, income11))
+linked_gsub <- linked_gsub %>% mutate(income13 = gsub("100,000-124,999", 115000, income12))
+linked_gsub <- linked_gsub %>% mutate(income14 = gsub("125,000-149,999", 135000, income13))
+linked_gsub <- linked_gsub %>% mutate(income15 = gsub("150,000-199,999", 175000, income14))
+linked_gsub <- linked_gsub %>% mutate(Incomes = gsub("200,000 or more", 205000, income15))
+
+#Check
+table(linked_gsub$Incomes)
+
+linked_gsub$Incomes <- as.numeric(as.character(linked_gsub$Incomes))
+
+#Plot 3 - as a continous variable
+ggplot() +  
+  geom_sf(data = linked_gsub, size = 0.5, aes(color = Incomes, geometry = geometry)) +
+  xlab("Longitude") + ylab("Latitude") + ggtitle("Household Synthetic Population by Income") +
+  theme(text = element_text(size = 20)) +
+  scale_color_continuous(high = "#132B43", low = "#56B1F7")
+
+  
+  
+      
