@@ -27,7 +27,7 @@ The **Procedure** is :
   
   + To be precise it was around 896 variables
   
-####**IPF OUTPUT*####
+####**IPF OUTPUT**
 ![](www/ipfoutput1.png)</center>
 
 The above picture is a screenshot from the result of Iterative Proportional Fitting output. This picture is a small portion from  IPF output performed on **one** census tract. When we take a look at it, we can see that there are four variables. They are Race, Tenure, Age and Salary.
