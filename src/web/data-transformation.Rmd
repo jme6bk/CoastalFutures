@@ -3,7 +3,7 @@ title: "Data Transformation"
 output: html_document
 ---
 ##**Cropland Data Layer**
-The purpose of the Cropland Data Layer is to use satellite imagery to provide acreage estimates to the Agricultural Statistics Board for major commodities and to produce digital, crop-specific, categorized geo-referenced output products. The spatial resolution is 30 meters covering the Continental United States. However, the data was filter to just Northampton and Accomack County for this project. The years of available data for these two counties were 2021 to 2008 and 2002. The original CDL data can be found [here](https://croplandcros.scinet.usda.gov). 
+The purpose of the Cropland Data Layer is to use satellite imagery to provide acreage estimates to the Agricultural Statistics Board for major commodities and to produce digital, crop-specific, categorized geo-referenced output products. The spatial resolution is 30 meters covering the Continental United States. However, the data was filter to just Northampton and Accomack County for this project. The years of available data for these two counties were 2021 to 2008 and 2002. 
 
 The goal of this data transformation was to find the area of each crop in specific parcels. As an example, the data transformation processes for Corn in Northampton is listed below. 
 
@@ -57,7 +57,6 @@ library(rmarkdown)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Northampton2021.RDS"))
 ```
 
-The code can be found [here](https://github.com/uva-bi-sdad/dspg22_coastal/tree/master/src/parcels) under the R scripts labeled CDL_Parcel_intersections, CDLfunction, and CDL_exploration. 
 
 ##**C-CAP Regional Land Cover and Change**
 A similar process as the CDL was preformed on the CCAP data. However, the CCAP data was originally in polygon geometries, so there was no need to create a buffer. From here, the data transformation was identical to the CDL data. 
@@ -82,5 +81,12 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/landuse20
 
 ```
 
-The code for this process can be found [here](https://github.com/uva-bi-sdad/dspg22_coastal/blob/master/src/parcels/CCAP_Parcel_intersections_and_function.R) under the R script labeled CCAP_Parcel_intersections_and_function.
+---------------------------------------
+[Orginal CDL Data](https://croplandcros.scinet.usda.gov). 
+
+[Code for CDL Data Transformation](https://github.com/uva-bi-sdad/dspg22_coastal/tree/master/src/parcels)  
+(see the R scripts labeled CDL_Parcel_intersections, CDLfunction, and CDL_exploration) 
+
+[Code for CCAP Data Transformation](https://github.com/uva-bi-sdad/dspg22_coastal/blob/master/src/parcels/CCAP_Parcel_intersections_and_function.R)  
+(see the R script labeled CCAP_Parcel_intersections_and_function)
 

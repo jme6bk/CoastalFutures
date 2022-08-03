@@ -50,10 +50,15 @@ Manipulated Data from the Cropland Data Layer and C-CAP Regional Land Cover and 
 ####*Synthetic Population*
 Used a technique called Iterative Proportional Fitting to generate a synthetic population down to the household level for Accomack and Northampton county using Census and housing data
 
-#**Sponsor**
+#**Sponsors**
 
-![](www/NSF.png)
+![](www/NSF.png){width=45%}    ![ ](www/logo-UVA-ERI.png){width=45%}
 
 ---------------------------------------------------------
+  
 
-[![ ](www/black-logo.png){width=50%}](https://biocomplexity.virginia.edu/event/data-science-public-good-symposium-2022)
+<p align="center"> 
+[![ ](www/black-logo.png){width=50%}](https://biocomplexity.virginia.edu/event/data-science-public-good-symposium-2022) 
+</p> 
+
+

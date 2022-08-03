@@ -72,4 +72,4 @@ These tables are 5-year estimates from 2016-2020 and are at the census tract lev
 - B25003A-G: Tenure by Race  
 
 -----------------------------------------------------------------------
-1. [original CDL data](https://croplandcros.scinet.usda.gov). 
+1. [Original CDL Data](https://croplandcros.scinet.usda.gov)

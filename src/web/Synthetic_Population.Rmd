@@ -6,8 +6,9 @@ output: html_document
 The  goal of our project is to impute a synthetic population that represent those Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  The use of synthetic populations is an approach that can retain aggregate population characteristics at larger community levels (e.g., Census block, neighborhood, farming sector) while constructing “synthetic” households using imputation methods without  compromising  privacy.
 
 
-##**Methodology**
-The Method used for the construction of Synthetic Population is **Iterative Proportional Fitting** because IPF is computationally efficient  and it involves resampling from microdata and can include housing data for more precise sub-block group estimation.
+###**Methodology**
+The Method used for the construction of Synthetic Population is **Iterative Proportional Fitting** because IPF is computationally efficient  and it involves resampling from microdata and can include housing data for more precise sub-block group estimation. In order to implement IPF procedure in R, there is a package called **mipfp**.
+
 
 IPF estimates a joint table given marginal constraints
 
@@ -19,7 +20,7 @@ The **Procedure** is :
 
 3. Iterate (1) and (2) until convergence
 
-###**Resampling and adding locations**
+###**Resampling and Adding Locations**
 
 - IPF produces a maximum entropy estimate of the joint table subject to constraints of the marginals
 
@@ -27,21 +28,10 @@ The **Procedure** is :
   
   + To be precise it was around 896 variables
   
-####**IPF OUTPUT**
-![](www/ipfoutput1.png)</center>
+####**IPF Output**
+The below picture is a screenshot from the result of Iterative Proportional Fitting output. This picture is a small portion from  IPF output performed on **one** census tract. This picture shows that there are four variables: Race, Tenure, Age, and Household Income. It shows the number of householders for different conditions of variables. 
 
-The above picture is a screenshot from the result of Iterative Proportional Fitting output. This picture is a small portion from  IPF output performed on **one** census tract. When we take a look at it, we can see that there are four variables. They are Race, Tenure, Age and Salary.
-
-
-Basically it shows the number of householders for different conditions of variables. 
-
-- For example, if we see the second row of the first column, the value is **3**. 
-
-- It indicates us that there 3 householders who are **White** with salary **less than 10,000**, **betwwen age 25 - 44** and **owning** a home.
-
-The actual output contains values for various conditions of those variables. 
-
-They are
+The output contains values for various conditions of those variables. 
 
 - Races : White, Black, AIAN, Asian, NHPI and Other
 
@@ -49,24 +39,28 @@ They are
 
 - Age: 0-24, 25-44, 45 -64, 65+
 
-- Salary : Less than 10,000, 10,000-14999 .....200,000 or more
+- Salary : Less than 10,000, 10,000-14999 .... 200,000 or more
 
-We have created a dataframe form the IPF output (One Census tract) and linking it below. You can see that there is a Freq column which indicates the number of householders. 
+For example, the second row of the first column has a value of **3**. This indicates that 3 householders who are **White** with an income **less than 10,000**, between the ages **25 - 44** and **own** their home need to be sampled with replacement from the microdata. 
+
+![](www/ipfoutput1.png)</center>
+
+
+Shown below is a data frame from the IPF output of this same Census tract. The "Freq" column indicates the number of householders that need to be sampled with replacement to create the synthetic population. 
 
 ```{r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_output.RDS"))
 ```
 
+- The **Resampling process** involved with microdata is a simple **random sample** with replacement  
 
-- There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement  
+- SERIALNO from the ACS PUMS data tables (see data - ACS) were sampled to matches each cell from the ipf output for all census tracts to create the full synthetic population  
 
--  We sampled SERIALNO from the ACS PUMS data tables (see data - ACS) that matches each cell from the ipf output to create synthetic population  
-
-- Final step involves attaching Latitiudes  and Longitudes For that process, We took the blackknight housing data, extracted the latitiude and longitude coordinates  and linked those coordinates with our sampled output.
+- Final step involves placing the synthetic population into households. The latitudes and longitudes of the housing data were extracted and randomly assigned to the complete synthetic population.
 
 ###**Northampton and Accomack Synthetic Population**
-We have created a function to automate the  IPF process to perform IPF on all census tracts of Accomack and Northampton counties. The Synthetic population dataframe  for Northampton and Accomack counties which is generated after linking Serialno and Coordinates are linked below.
+A function was created to automate the IPF process and perform Iterative Proportional Fitting on all census tracts in Accomack and Northampton county. The synthetic population data frame for both counties generated after attaching serial numbers and coordinates of household is shown below.
 
 ####*Northampton Synthetic Population*
 ```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
@@ -84,7 +78,7 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomacks
 
 ###**Methods to improve Sophistication**
 
-- There are three methods to increase Sophistication
+- There are four methods to increase Sophistication
 
      + Choose a lat/long sampled uniformly over the Block Group
      
@@ -93,7 +87,12 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomacks
      + Match people to housing units  
      
      + Link IPF output and households based on income, taxes, and property value
-  
+
+###**Disadvantages of IPF:**
+
+- Iterative Proportional Fitting finds the maximum likelihood estimation; this is a modal solution  
+
+- Synthetic samples are draws from the microdata that have been repeated multiple times. Some applications, prefer to have unique samples (e.g. identifiability study for HUD) 
 
 ###**Estimating Variability**
 
@@ -101,8 +100,6 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomacks
 
 - To account for the sampling variability, resample the marginal tables for each run.
 
-###**R Implementatiom**
-In order to implement IPF procedure in R, there is a package called **mipfp**
 
 
 
