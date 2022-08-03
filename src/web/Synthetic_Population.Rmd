@@ -30,12 +30,18 @@ The **Procedure** is :
 ####**IPF OUTPUT*
 ![](www/ipfoutput1.png)</center>
 
-The above picture is a screenshot from Iterative Propoertional Fitting result. When we take a look at it, we can see that there are four variables. They are Race, Tenure, Age and Salary.
+The above picture is a screenshot from the result of Iterative Proportional Fitting output.  When we take a look at it, we can see that there are four variables. They are Race, Tenure, Age and Salary.
 
 
-Basically it shows the number of householders for different conditions of variables. For example, if we see the second row of the first column, the value is **3**. It indicates us that there 3 householders who are White with salary less than 10,000, betwwen age 25 - 44  and owning a home.
+Basically it shows the number of householders for different conditions of variables. 
 
-This picture is a small portion from  IPF output.The actual output contains values for various conditions of variables. 
+- For example, if we see the second row of the first column, the value is **3**. 
+
+- It indicates us that there 3 householders who are **White** with salary **less than 10,000**, **betwwen age 25 - 44** and **owning** a home.
+
+This picture is a small portion from  IPF output.The actual output contains values for various conditions of those  variables. 
+
+They are
 
 - Races : White, Black, AIAN, Asian, NHPI and Other
 
@@ -45,7 +51,7 @@ This picture is a small portion from  IPF output.The actual output contains valu
 
 - Salary : Less than 10,000, 10,000-14999 .....200,000 or more
 
-We have created a Dataframe from the IPF output and the dataframe is linked below. We can find the frequency of various householders in that dataframe.
+We have created a dataframe form the IPF output and linking it below. You can see that there is a Freq column which indicates the number of householders. 
 
 ```{r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
@@ -53,15 +59,14 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 ```
 
 
-
 - There is a **Resampling process** involved with microdata which is just simple **random sample** with replacement  
 
 -  We sampled SERIALNO from the ACS PUMS data tables (see data - ACS) that matches each cell from the ipf output to create synthetic population  
 
-- Final step of  involves attaching household geometry to the synthetic population. For that process we took the blackknight housing data, performed shape file conversion to extract the latitiudes and longitudes coordinates  and linked the coordinates with their unique housing IDs to our IPF outputs. 
+- Final step involves attaching coordinates. For that process, We took the blackknight housing data, extracted the latitiudes and longitudes coordinates  and linked those coordinates with our output.
 
 ###**Northampton and Accomack Synthetic Population**
-The dataframes for Synthetic population of Northampton and Accomack counties are linked below.
+The Synthetic population  dataframes for Northampton and Accomack counties are linked below.
 
 ####*Northampton Synthetic Population*
 ```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
