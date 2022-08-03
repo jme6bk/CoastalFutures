@@ -2,7 +2,7 @@
 title: "Synthetic Population"
 output: html_document
 ---
-To examine the synthetic population more in depth and highlight the population most vulnerable to climate risks on the Eastern Shore most, lets look into some initial exploratory data analysis on the synthetic population of 17,401 householders. 
+To examine the synthetic population in more depth and highlight the population most vulnerable to climate risks on the Eastern Shore, let's look into some initial exploratory data analysis on the synthetic population of 17,401 householders. 
 
 ##Race
 
@@ -18,7 +18,7 @@ To examine the synthetic population more in depth and highlight the population m
 
 </p>
 
-Above is a plot for the percent of each race aggregated from the household synthetic population to the census tract. As well as a bar graph showing the distribution of race by tenure in the population. AIAN is abbreviated for American Indian and Alaska Native. The population consists of mostly white and black people throughout the Eastern Shore with the vast majority of the population being white. It is important to note that the synthetic population is based acs data about 'householders'. This is going to have a definite effect on the demographics of the population. The darker the color, the higher percentage of that race in that census tract. The lighter the color, the lower percentage of that race in that census tract. There is clear split in the plots for the percentage population white vs black in each census tract. This is not unexpected as the majority of the population is made up of those two races. Accomack County has a higher white population percentage than Northampton County. In contrast, Northampton has a higher black population percentage. Northampton is also a smaller county than Accomack. The bar graph shows that people who are white are more likely to own their home and people who are black tend to be more likely to rent their home. 
+Above is a plot for the percent of each race aggregated from the household synthetic population to the census tract. As well as a bar graph showing the distribution of race by tenure in the population. AIAN is abbreviated for American Indian and Alaska Native. The population consists of mostly white and black people throughout the Eastern Shore with the vast majority of the population being white. It is important to note that these summaries of our synthetic population are based on the population only 'householders' which may alter  demographics compared the the full population. The darker the color, the higher percentage of that race in that census tract. The lighter the color, the lower percentage of that race in that census tract. There is clear split in the plots for the percentage population white vs black in each census tract. This is not unexpected as the majority of the population is made up of those two races. Accomack County has a higher white population percentage than Northampton County. In contrast, Northampton has a higher black population percentage. Northampton is also a smaller county than Accomack. The bar graph shows that people who are white are more likely to own their home and people who are black tend to be more likely to rent their home. 
 
 ##Income
 <p align="center">  
@@ -33,7 +33,7 @@ This plot shows the income level distribution of the household synthetic populat
 ![](www/Income_Race.png)
 </p>
 
-The bar graph above shows the synthetic household by income level and race. It is clear to see that the white population tends to make more than the rest of the population. The higher income level leads to a more of a probability that the synthetic person is white. While a lower income level leave to more of a probability that the synthetic person in black. The distribution is skewed towards a lower income-level.
+The bar graph above shows the synthetic household by income level and race. It is clear to see that the white population tends to make more than the rest of the population. The higher income level leads to a more of a probability that the person is white. While a lower income level leave to more of a probability that the  person in black. The distribution is skewed towards a lower income-level.
 
 
 <p align="center">  
@@ -67,6 +67,6 @@ Above is a bar graph showing the distribution of age by race in the population. 
 </p>
 
 ####*Next Steps*
-The next step in the synthetic population is to attach household not at random, but based off the income level of the individual and property value of the household from the housing data. This will give a more accurate representation of the real population. From here, the goal would be to preform demographic projections through a co-hort component method to create future populations. These future population will be used in the agent-based models to see the possible effects of climate change on the Eastern Shore. 
+The next step in the synthetic population is to change the way that synthetic households are assigned to real hosuing units in the tax data. We will attach households not at random, but based off the income level of the individual and property value of the household from the housing data. This will give a more accurate representation of the real population. From here, the goal would be to preform demographic projections through a cohort component method to create future populations. These projections will be used in the agent-based models to see the possible effects of climate change on the Eastern Shore. 
 
 
