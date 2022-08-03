@@ -27,10 +27,10 @@ The **Procedure** is :
   
   + To be precise it was around 896 variables
   
-####**IPF OUTPUT*
+####**IPF OUTPUT*####
 ![](www/ipfoutput1.png)</center>
 
-The above picture is a screenshot from the result of Iterative Proportional Fitting output.  When we take a look at it, we can see that there are four variables. They are Race, Tenure, Age and Salary.
+The above picture is a screenshot from the result of Iterative Proportional Fitting output. This picture is a small portion from  IPF output performed on **one** census tract. When we take a look at it, we can see that there are four variables. They are Race, Tenure, Age and Salary.
 
 
 Basically it shows the number of householders for different conditions of variables. 
@@ -39,7 +39,7 @@ Basically it shows the number of householders for different conditions of variab
 
 - It indicates us that there 3 householders who are **White** with salary **less than 10,000**, **betwwen age 25 - 44** and **owning** a home.
 
-This picture is a small portion from  IPF output.The actual output contains values for various conditions of those  variables. 
+The actual output contains values for various conditions of those variables. 
 
 They are
 
@@ -63,10 +63,10 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 
 -  We sampled SERIALNO from the ACS PUMS data tables (see data - ACS) that matches each cell from the ipf output to create synthetic population  
 
-- Final step involves attaching coordinates. For that process, We took the blackknight housing data, extracted the latitiudes and longitudes coordinates  and linked those coordinates with our output.
+- Final step involves attaching coordinates. For that process, We took the blackknight housing data, extracted the latitiudes and longitudes coordinates  and linked those coordinates with our sampled output.
 
 ###**Northampton and Accomack Synthetic Population**
-The Synthetic population  dataframes for Northampton and Accomack counties are linked below.
+We have created a function to automate the  IPF process which is used it to perform IPF on all census tracts of Accomack and Northampton counties. The Synthetic population dataframe  for Northampton and Accomack counties which is generated after linking Serialno and Coordinates are linked below.
 
 ####*Northampton Synthetic Population*
 ```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
