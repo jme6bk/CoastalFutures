@@ -51,7 +51,7 @@ They are
 
 - Salary : Less than 10,000, 10,000-14999 .....200,000 or more
 
-We have created a dataframe form the IPF output and linking it below. You can see that there is a Freq column which indicates the number of householders. 
+We have created a dataframe form the IPF output (One Census tract) and linking it below. You can see that there is a Freq column which indicates the number of householders. 
 
 ```{r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
@@ -63,7 +63,7 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 
 -  We sampled SERIALNO from the ACS PUMS data tables (see data - ACS) that matches each cell from the ipf output to create synthetic population  
 
-- Final step involves attaching coordinates. For that process, We took the blackknight housing data, extracted the latitiudes and longitudes coordinates  and linked those coordinates with our sampled output.
+- Final step involves attaching Latitiudes  and Longitudes For that process, We took the blackknight housing data, extracted the latitiude and longitude coordinates  and linked those coordinates with our sampled output.
 
 ###**Northampton and Accomack Synthetic Population**
 We have created a function to automate the  IPF process which is used it to perform IPF on all census tracts of Accomack and Northampton counties. The Synthetic population dataframe  for Northampton and Accomack counties which is generated after linking Serialno and Coordinates are linked below.
