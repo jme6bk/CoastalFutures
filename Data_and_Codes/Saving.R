@@ -170,7 +170,7 @@ VA_2_county <- tigris::counties(state = "51", cb = TRUE) %>%
   st_as_sf() %>% 
   dplyr::filter(NAME %in% c("Accomack", "Northampton")) 
 
-linked_sampled_fSF <- rbind(AccomacksampledfSF, NorthamptonsampledfSF)
+  linked_sampled_fSF <- rbind(AccomacksampledfSF, NorthamptonsampledfSF)
 
 ## Race ##
 

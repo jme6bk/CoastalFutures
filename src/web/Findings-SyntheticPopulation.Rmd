@@ -23,7 +23,7 @@ Above is a plot for the percent of each race aggregated from the household synth
 ##Income
 <p align="center">  
 
-![](www/Income_Continuous.png){width=60%}
+![](www/Income_red_blue.png){width=60%}
 </p>
 
 This plot shows the income level distribution of the household synthetic population geographically. This plot appears to have some clustering in specific areas. The darker the color means the more income that household makes. The lighter the color means the less income that household makes. 
@@ -53,16 +53,18 @@ The plot above looks specifically at the $75,000 to $99,999 income level. This i
 
 <p align="center">  
 
-![](www/Age_Plot.png){width=60%}
-</p>
-
-<p align="center">  
-
 ![](www/Race_Age.png)
 
 </p>
 
-Above is a plot of the age distribution of the household synthetic population geographically. As well as a bar graph showing the distribution of age by race in the population. The older population is much larger than the younger population. This is not unexpected as the data consist of householders. It is more probable that a person 65 or older is a householder, rather than a person in the age range 0 to 24 years old. The graph shows, the major race present is white. This is expected as the white ethnicity makes up the majority of the population. The black population is largely distributed in the 45-64 age range, while the white population is largely made up of ages 65 and up. 
+
+Above is a bar graph showing the distribution of age by race in the population. The older population is much larger than the younger population. This is not unexpected as the data consist of householders. It is more probable that a person 65 or older is a householder, rather than a person in the age range 0 to 24 years old. The graph shows, the major race present is white. This is expected as the white ethnicity makes up the majority of the population. The black population is largely distributed in the 45-64 age range, while the white population is largely made up of ages 65 and up. 
+
+<p align="center">  
+
+![](www/Age_Plot.png){width=60%}
+
+</p>
 
 ####*Next Steps*
 The next step in the synthetic population is to attach household not at random, but based off the income level of the individual and property value of the household from the housing data. This will give a more accurate representation of the real population. From here, the goal would be to preform demographic projections through a co-hort component method to create future populations. These future population will be used in the agent-based models to see the possible effects of climate change on the Eastern Shore. 
