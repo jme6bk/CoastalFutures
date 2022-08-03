@@ -66,7 +66,7 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 - Final step involves attaching Latitiudes  and Longitudes For that process, We took the blackknight housing data, extracted the latitiude and longitude coordinates  and linked those coordinates with our sampled output.
 
 ###**Northampton and Accomack Synthetic Population**
-We have created a function to automate the  IPF process which is used it to perform IPF on all census tracts of Accomack and Northampton counties. The Synthetic population dataframe  for Northampton and Accomack counties which is generated after linking Serialno and Coordinates are linked below.
+We have created a function to automate the  IPF process to perform IPF on all census tracts of Accomack and Northampton counties. The Synthetic population dataframe  for Northampton and Accomack counties which is generated after linking Serialno and Coordinates are linked below.
 
 ####*Northampton Synthetic Population*
 ```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
