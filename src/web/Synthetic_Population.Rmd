@@ -7,7 +7,7 @@ The  goal of our project is to impute a synthetic population that represent  Acc
 
 
 ###**Methodology**
-The method use for the construction of Synthetic Population is **Iterative Proportional Fitting**.IPF is computationally efficient,involves resampling from microdata and can include housing data for more precise sub-block group estimation. In order to implement IPF procedure in R,we use the package **mipfp**.
+The method we use for the construction of Synthetic Population is **Iterative Proportional Fitting**.IPF is computationally efficient,involves resampling from microdata and can include housing data for more precise sub-block group estimation. In order to implement IPF procedure in R,we use the package **mipfp**.
 
 
 IPF estimates a joint table given marginal constraints
