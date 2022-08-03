@@ -39,16 +39,16 @@ How will water security change across different communities? How does this chang
 # **Methods**
 
 ####*Literature Review*
-Established familiarity with and understanding of current research on climate risk and synthetic methods to find out what research has already been done and identify what is unknown within the project
+Established familiarity with and understanding of current research on climate risks and synthetic methods to find out what research has already been done and identify what is unknown within the project
 
 ####*Data Inventory*
-Explored and assessed the usability, accuracy, and biases of possible national and state data sources to create sub-county level data sets to generate a synthetic population and demographic projections.
+Explored and assessed the usability, accuracy, and biases of possible national and state data sources to create sub-county level data sets to generate a synthetic population and demographic projections
 
 ####*Data Transformation*
-Manipulated Data from the Cropland Data Layer and C-CAP Regional Land Cover and Change by taking the original imported data and intersecting their geometries with parcel data from the Eastern Shore of Virginia. The purpose was to charactize crop production and land cover in each parcel to create data products to share with project collaborators.
+Manipulated Data from the Cropland Data Layer and C-CAP Regional Land Cover and Change by taking the original imported data and intersecting their geometries with parcel data from the Eastern Shore of Virginia. The purpose was to characterize crop production and land cover in each parcel to create data products to share with project collaborators
 
 ####*Synthetic Population*
-A technique called Iterative Proportional Fitting, generated a synthetic population down to the household level for Accomack and Northampton county using Census and housing data.
+Used a technique called Iterative Proportional Fitting to generate a synthetic population down to the household level for Accomack and Northampton county using Census and housing data
 
 #**Sponsor**
 
