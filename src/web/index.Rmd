@@ -51,7 +51,9 @@ Manipulated Data from the Cropland Data Layer and C-CAP Regional Land Cover and 
 Through a technique called iterative proportional fitting, a synthetic population down the the household level was created for Accomack and Northampton county based on the American Community Survey Public Use Microdata Sample (ACS PUMS)
 
 #**Sponsor**
-National Science Foundation (NSF)
 
 ![](www/NSF.png)
 
+---------------------------------------------------------
+
+[![ ](www/black-logo.png){width=50%}](https://biocomplexity.virginia.edu/event/data-science-public-good-symposium-2022)
