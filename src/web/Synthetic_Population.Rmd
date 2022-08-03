@@ -27,11 +27,25 @@ The **Procedure** is :
   
   + To be precise it was around 896 variables
   
-####*IPF OUTPUT*  
+####**IPF OUTPUT*
 ![](www/ipfoutput1.png)</center>
 
+The above picture is a screenshot from Iterative Propoertional Fitting result. When we take a look at it, we can see that there are four variables. They are Race, Tenure, Age and Salary.
 
 
+Basically it shows the number of householders for different conditions of variables. For example, if we see the second row of the first column, the value is **3**. It indicates us that there 3 householders who are White with salary less than 10,000, betwwen age 25 - 44  and owning a home.
+
+This picture is a small portion from  IPF output.The actual output contains values for various conditions of variables. 
+
+- Races : White, Black, AIAN, Asian, NHPI and Other
+
+- Tenure : Owned, Rented
+
+- Age: 0-24, 25-44, 45 -64, 65+
+
+- Salary : Less than 10,000, 10,000-14999 .....200,000 or more
+
+We have created a Dataframe from the IPF output and the dataframe is linked below. We can find the frequency of various householders in that dataframe.
 
 ```{r, layout="l-body-outset", echo = FALSE}
 library(rmarkdown)
@@ -44,8 +58,10 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/freq_IPF_
 
 -  We sampled SERIALNO from the ACS PUMS data tables (see data - ACS) that matches each cell from the ipf output to create synthetic population  
 
-- Final step of IPF involves attaching household geometry to the synthetic population. For that process we took the blackknight housing data, performed shape file conversion to abstract the latitiudes and longitudes and linked the coordinates with thier unique housing IDs to our IPF outputs. 
+- Final step of  involves attaching household geometry to the synthetic population. For that process we took the blackknight housing data, performed shape file conversion to extract the latitiudes and longitudes coordinates  and linked the coordinates with their unique housing IDs to our IPF outputs. 
 
+###**Northampton and Accomack Synthetic Population**
+The dataframes for Synthetic population of Northampton and Accomack counties are linked below.
 
 ####*Northampton Synthetic Population*
 ```{r, layout="l-body-outset", echo = FALSE, results = 'asis'}
