@@ -81,7 +81,7 @@ paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/Accomacks
 
 - To account for the sampling variability, resample the marginal tables for each run using ACS margins of error.
 
-###**Improving Household Assignment
+###**Improving Household Assignment**
 
 Synthetic households from IPF output are assigned to actual housing units using tax data. Currently this assignment is done at random within a given census tract. As a next step, we will weight the assignment between synthetic households and real housing units probabilistically based on e.g. income, taxes, and property value.
 
