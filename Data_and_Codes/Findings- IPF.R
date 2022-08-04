@@ -330,13 +330,127 @@ table(linked_gsub$Incomes)
 
 linked_gsub$Incomes <- as.numeric(as.character(linked_gsub$Incomes))
 
+Log_Income <- linked_gsub %>% mutate(log_scale_income = log10(Incomes))
+  
+
 #Plot 3 - as a continous variable
 ggplot() +  
-  geom_sf(data = linked_gsub, size = 0.5, aes(color = Incomes, geometry = geometry)) +
+  geom_sf(data = Log_Income, size = 0.5, aes(color = log_scale_income, geometry = geometry)) +
   xlab("Longitude") + ylab("Latitude") + ggtitle("Household Synthetic Population by Income") +
   theme(text = element_text(size = 20)) +
-  scale_color_continuous(high = "#132B43", low = "#56B1F7")
+  scale_color_continuous(high = "blue", low = "red") 
+ 
 
-  
-  
-      
+################################################################################
+################################################################################
+
+#AGE---------------
+
+intersect <- rbind(intersect_Northampton, intersect_Accomack)
+
+# find the % of people that make max income in the area
+tract1 <- intersect %>% filter(GEOID %in% "51001090101")
+(sort(table(tract1$age)))
+
+tract2 <- intersect %>% filter(GEOID %in% "51001090102")
+(sort(table(tract2$age)))
+
+tract3 <- intersect %>% filter(GEOID %in% "51001090201")
+(sort(table(tract3$age)))
+
+tract4 <- intersect %>% filter(GEOID %in% "51001090202")
+(sort(table(tract4$age)))
+
+tract5 <- intersect %>% filter(GEOID %in% "51001090300")
+(sort(table(tract5$age)))
+
+tract6 <- intersect %>% filter(GEOID %in% "51001090401")
+(sort(table(tract6$age)))
+
+tract7 <- intersect %>% filter(GEOID %in% "51001090402")
+(sort(table(tract7$age)))
+
+tract8 <- intersect %>% filter(GEOID %in% "51001090500")
+(sort(table(tract8$age)))
+
+tract9 <- intersect %>% filter(GEOID %in% "51001090600")
+(sort(table(tract9$age)))
+
+tract10 <- intersect %>% filter(GEOID %in% "51001090700")
+(sort(table(tract10$age)))
+
+tract11 <- intersect %>% filter(GEOID %in% "51001090800")
+(sort(table(tract11$age)))
+
+tract12 <- intersect %>% filter(GEOID %in% "51131930100")
+(sort(table(tract12$age)))
+
+tract13 <- intersect %>% filter(GEOID %in% "51131930200")
+(sort(table(tract13$age)))
+
+tract14 <- intersect %>% filter(GEOID %in% "51131930301")
+(sort(table(tract14$age)))
+
+tract15 <- intersect %>% filter(GEOID %in% "51131930302")
+(sort(table(tract15$age)))
+
+
+over_65 <- c(397, 354, 990, 356, 294, 258, 364, 274, 520, 570, 401, 567, 535, 520, 309)
+under_25 <- c(12, 6, 24, 16, 6, 14, 10, 8, 16, 9, 9, 37, 32, 32, 26 )
+age_45_64 <- c(376, 333, 923, 337, 294, 234, 303, 284, 529, 531, 371, 585, 551, 504, 343)
+age_25_44 <- c(231, 223, 556, 174, 170, 135, 191, 187, 316, 396, 269, 326, 311, 277, 164)
+
+###STRAT HERE
+
+#Link to Sum dataframe and get percentage column
+plot <- cbind(Sum, over_65, under_25, age_25_44, age_45_64)
+
+plot_over_65 <- plot %>% mutate(Percent_of_Population = (over_65/Count)*100)
+plot_under_25 <-  plot %>% mutate(Percent_of_Population = (under_25/Count)*100)
+plot_45_64 <- plot %>% mutate(Percent_of_Population = (age_45_64/Count)*100)
+plot_25_44 <- plot %>% mutate(Percent_of_Population = (age_25_44/Count)*100)
+
+
+saveRDS(plot_over_65, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/plot_over_65.RDS")
+saveRDS(plot_under_25, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/plot_under_25.RDS")   
+saveRDS(plot_45_64, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/plot_45_64.RDS")   
+saveRDS(plot_25_44, file = "/home/jme6bk/github/CoastalFutures/Data_and_Codes/plot_25_44.RDS")   
+
+#plot - Percent Ages by census tract
+
+#Over 65
+ggplot() +
+  geom_sf(plot_over_65, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
+  ggtitle("Percent Distribution of Population Over 65") + xlab('Longitude') + ylab("Latitude") +
+  theme(text = element_text(size = 20)) + 
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#limits = c(0,42))
+
+#Under 25
+ggplot() +
+  geom_sf(plot_under_25, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
+  ggtitle("Percent Distribution of Population Under 25") + xlab('Longitude') + ylab("Latitude") +
+  theme(text = element_text(size = 20)) + 
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#limits = c(0,42))
+
+#45 - 64
+ggplot() +
+  geom_sf(plot_45_64, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
+  ggtitle("Percent Distribution of Population Ages 45 to 64 ") + xlab('Longitude') + ylab("Latitude") +
+  theme(text = element_text(size = 20)) + 
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#limits = c(0,42))
+
+#25 - 44
+ggplot() +
+  geom_sf(plot_25_44, mapping = aes(geometry = geometry, fill = Percent_of_Population)) +
+  ggtitle("Percent Distribution of Population Ages 25 to 44 ") + xlab('Longitude') + ylab("Latitude") +
+  theme(text = element_text(size = 20)) + 
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7")
+
+#limits = c(0,42))
+

@@ -3,11 +3,11 @@ title: "Synthetic Population"
 output: html_document
 ---
 
-The  goal of our project is to impute a synthetic population that represent  Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  The use of synthetic populations is an approach that can retain aggregate population characteristics at larger community levels (e.g., Census block, neighborhood, farming sector) while constructing “synthetic” households using imputation methods without  compromising  privacy.
+The  goal of our project is to impute a synthetic population that represents Accomack and Northampton communities  by combining information from various sources of data, administrative and survey data to get a representation of those rural communities down to the level of individual households and farms. That will be used as an input into agent based models for stakeholder decisions, and hydrological models to measure flood hazard, water supply, and groundwater salinization.  The use of synthetic populations is an approach that can retain aggregate population characteristics at larger community levels (e.g., Census block, neighborhood, farming sector) while constructing “synthetic” households using imputation methods without  compromising  privacy.
 
 
 ###**Methodology**
-The method we use for the construction of Synthetic Population is **Iterative Proportional Fitting**.IPF is computationally efficient,involves resampling from microdata and can include housing data for more precise sub-block group estimation. In order to implement IPF procedure in R,we use the package **mipfp**.
+The method we used for the construction of Synthetic Population is **Iterative Proportional Fitting**. IPF is computationally efficient,involves resampling from microdata and can include housing data for more precise sub-block group estimation. In order to implement IPF procedure in R, we use the package **mipfp**.
 
 
 IPF estimates a joint table given marginal constraints
@@ -26,7 +26,7 @@ The **Procedure** is :
 
   + Our IPF output was a list with categories like Race, Income level, Age, Tenure and number of households
   
-  + The result is a realization of synthetic households over the ESVA with attached housing characteristics       and census sociodemographic data.
+  + The result is a realization of synthetic households over the ESVA with attached housing characteristics and census sociodemographic data.
   
 ####**IPF Output**
 The below picture is a screenshot from the result of Iterative Proportional Fitting output. This picture is a small portion from  IPF output performed on **one** census tract. This picture shows that there are four variables: Race, Tenure, Age, and Household Income. It shows the number of householders for different conditions of variables. 
@@ -74,8 +74,6 @@ library(rmarkdown)
 paged_table(readRDS("/home/jme6bk/github/CoastalFutures/Data_and_Codes/AccomacksampledfSF_Coords.RDS"))
 
 ```
-
-
 
 ###**Estimating Variability**
 

@@ -2,7 +2,7 @@
 title: "Cropland Data Layer & CCAP Regional Land Cover and Change"
 ---
 
-In order to visualize how the data was manipulated, three parcels from each county were selected and their percent area land uses were graphed. The graphs shown below include Northampton and Accomack Counties for the year 2016 from both Cropland Data Layer with the CCAP Regional Land Cover and Change. It is interesting to compare and contrast the two data sources to see any similarities or differences among the same exact areas. The type of activity that is going on in these parcels, indicates the purpose of the land whether that is agricultural, industrial, communal, or uninhabited. These graphs also test the confidence of out data transformation. The totaling percentages from all these land uses for each parcel is equal to 100%. This is a good indication because both original data sets had no overlap in their geometries; therefore, no percent area crop or land cover should exceed 100%. These graphs confirm that.
+In order to visualize how the data was manipulated, three parcels from each county were selected and their percent area land uses were graphed. The graphs shown below include Northampton and Accomack Counties for the year 2016 from both Cropland Data Layer with the CCAP Regional Land Cover and Change. It is interesting to compare and contrast the two data sources to see any similarities or differences among the same exact areas. The type of activity that is going on in these parcels, indicates the purpose of the land whether that is agricultural, industrial, communal, or uninhabited. These graphs also test the confidence of our data transformation. The totaling percentages from all these land uses for each parcel is equal to 100%. This is a good indication because both original data sets had no overlap in their geometries; therefore, no percent area crop or land cover should exceed 100%. These graphs confirm that.
 
 ####*Northampton Cropland Data Layer Parcel Use*
 ![ ](www/CDL_Northampton_Parcel_Ex.png)
@@ -21,7 +21,7 @@ Above are the CDL and CCAP data graphs for Accomack County and its three sample 
 
 In final, the graphs from the CDL data have many similarities and roughly follows the same distribution and many similar attributes as the CCAP data graphs. Comparing these four graphs give the total output from the data transformation added confidence. They also model an idea of the entire land use on Virginia's Eastern Shore. 
 
-###*Next Steps*
+####*Next Steps*
 After the data transformation, the CDL and CCAP data will be used to inform projections of the synthetic population. By identifying parcels with high agricultural use and high crop production, the team will be able to locate specific households within those parcels and label them as a farm or not a farm. These households will be a focus for the continuation of the project as they are at high risk from the repercussions of climate change. 
 
 

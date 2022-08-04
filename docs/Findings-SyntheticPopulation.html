@@ -402,18 +402,18 @@ div.tocify {
 <p align="center">
 <p><img src="www/White_Plot.png" style="width:40.0%" /> <img src="www/Black_Plot.png" style="width:40.0%" /></p>
 </p>
-<p>Above is a plot for the percent of each race aggregated from the household synthetic population to the census tract. As well as a bar graph showing the distribution of race by tenure in the population. AIAN is abbreviated for American Indian and Alaska Native. The population consists of mostly white and black people throughout the Eastern Shore with the vast majority of the population being white. It is important to note that these summaries of our synthetic population are based on the population only 'householders' which may alter demographics compared the the full population. The darker the color, the higher percentage of that race in that census tract. The lighter the color, the lower percentage of that race in that census tract. There is clear split in the plots for the percentage population white vs black in each census tract. This is not unexpected as the majority of the population is made up of those two races. Accomack County has a higher white population percentage than Northampton County. In contrast, Northampton has a higher black population percentage. Northampton is also a smaller county than Accomack. The bar graph shows that people who are white are more likely to own their home and people who are black tend to be more likely to rent their home.</p>
+<p>Above is a plot for the percent of each race aggregated from the household synthetic population to the census tract. As well as a bar graph showing the distribution of race by tenure in the population. AIAN is abbreviated for American Indian and Alaska Native. The population consists of mostly white and black people throughout the Eastern Shore with the vast majority of the population being white. It is important to note that these summaries of our synthetic population are based on the population of only 'householders' which may alter demographics compared to the the full population. The darker the color, the higher percentage of that race in that census tract. The lighter the color, the lower percentage of that race in that census tract. There is clear split in the plots for the percentage population white vs black in each census tract. This is not unexpected as the majority of the population is made up of those two races. Accomack County has a higher white population percentage than Northampton County. In contrast, Northampton has a higher black population percentage. Northampton is also a smaller county than Accomack. The bar graph shows that people who are white are more likely to own their home and people who are black tend to be more likely to rent their home.</p>
 </div>
 <div id="income" class="section level2">
 <h2>Income</h2>
 <p align="center">
-<img src="www/Income_Continuous.png" style="width:60.0%" />
+<img src="www/Log_scale_income.png" style="width:60.0%" />
 </p>
-<p>This plot shows the income level distribution of the household synthetic population geographically. This plot appears to have some clustering in specific areas. The darker the color means the more income that household makes. The lighter the color means the less income that household makes.</p>
+<p>This plot shows the income level distribution of the household synthetic population geographically. In order to show a better picture of the income level throughout the Eastern Shore, the income was plotted on a logarithmic scale. The logarithmic scale is useful to see all the income values easily, without the small values squeezed too closely together. This plot appears to have some clustering in specific areas. The darker the color means the more income that household makes. The lighter the color means the less income that household makes.</p>
 <p align="center">
 <img src="www/Income_Race.png" />
 </p>
-<p>The bar graph above shows the synthetic household by income level and race. It is clear to see that the white population tends to make more than the rest of the population. The higher income level leads to a more of a probability that the person is white. While a lower income level leave to more of a probability that the person in black. The distribution is skewed towards a lower income-level.</p>
+<p>The bar graph above shows the synthetic household by income level and race. It is clear to see that the white population tends to make more than the rest of the population. The higher income level leads to a more of a probability that a person is white. While a lower income level leave to more of a probability that a person in black. The distribution is skewed towards a lower income-level.</p>
 <p align="center">
 <img src="www/Income_Age.png" />
 </p>
@@ -426,18 +426,17 @@ div.tocify {
 <div id="age" class="section level2">
 <h2>Age</h2>
 <p align="center">
-<img src="www/Age_Plot.png" style="width:60.0%" />
-</p>
-<p align="center">
 <div class="figure">
 <img src="www/Race_Age.png" />
 
 </div>
 </p>
-<p>Above is a plot of the age distribution of the household synthetic population geographically. As well as a bar graph showing the distribution of age by race in the population. The older population is much larger than the younger population. This is not unexpected as the data consist of householders. It is more probable that a person 65 or older is a householder, rather than a person in the age range 0 to 24 years old. The graph shows, the major race present is white. This is expected as the white ethnicity makes up the majority of the population. The black population is largely distributed in the 45-64 age range, while the white population is largely made up of ages 65 and up.</p>
+<p>Above is a bar graph showing the distribution of age by race in the population. The older population is much larger than the younger population. This is not unexpected as the data consist of householders. It is more probable that a person 65 or older is a householder, rather than a person in the age range 0 to 24 years old. The graph shows, the major race present is white. This is expected as the white ethnicity makes up the majority of the population. The black population is largely distributed in the 45-64 age range, while the white population is largely made up of ages 65 and up.</p>
+<p><img src="www/Age_25_44.png" style="width:32.0%" /> <img src="www/Age_45-64.png" style="width:34.5%" /> <img src="www/Age_over_65.png" style="width:32.0%" /></p>
+<p>The plots above shows the percent of various age ranges aggregated from the household synthetic population to the census tract. These ranges include 25 to 44, 45 to 64, and 65 and above. The age range 0 to 24 was excluded because it makes up so little of the population. An important note is the scale of these plots. While the plots with age ranges '45 to 64' and 'over 65' are comparable. The scale on the plot with ages '25 to 44' has much smaller values. Nevertheless, the visualization is useful to see how the age of householders vary with geography.</p>
 <div id="next-steps" class="section level4">
 <h4><em>Next Steps</em></h4>
-<p>The next step in the synthetic population is to change the way that synthetic households are assigned to real hosuing units in the tax data. We will attach households not at random, but based off the income level of the individual and property value of the household from the housing data. This will give a more accurate representation of the real population. From here, the goal would be to preform demographic projections through a cohort component method to create future populations. These projections will be used in the agent-based models to see the possible effects of climate change on the Eastern Shore.</p>
+<p>The next step in the synthetic population is to change the way that synthetic households are assigned to real housing units in the tax data. We will attach households not at random, but based off the income level of the individual and property value of the household from the housing data. This will give a more accurate representation of the real population. From here, the goal would be to preform demographic projections through a cohort component method to create future populations. These projections will be used in the agent-based models to see the possible effects of climate change on the Eastern Shore.</p>
 </div>
 </div>
 
